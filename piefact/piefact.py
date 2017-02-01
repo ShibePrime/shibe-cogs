@@ -1,36 +1,92 @@
-import asyncio
-import json
-
-import aiohttp
+# noinspection PyUnresolvedReferences
+import discord
+import random
 from discord.ext import commands
+from random import randint
+from random import choice
 
-from .utils import chat_formatting as cf
+__author__ = "ScarletRav3n + shibe for piefacts"
 
 
-class PieFact:
+class Fun:
+    """fun random commands"""
 
-    """Gets random pie facts."""
-
-    def __init__(self, bot: commands.Bot):
+    def __init__(self, bot):
         self.bot = bot
-        self.url = "https://catfacts-api.appspot.com/api/facts?number={}"
 
-    @commands.command(pass_context=True, no_pm=True, name="piefact",
-                      aliases=["piefacts"])
-    async def _piefact(self, ctx: commands.Context, number: int=1):
-        """Gets random pie facts."""
+    @commands.command(pass_context=True)
+    async def sword(self, ctx, *, user: discord.Member):
+        """Sword Duel!"""
+        author = ctx.message.author
+        if user.id == self.bot.user.id:
+            await self.bot.say("I'm not the fighting kind")
+        else:
+            await self.bot.say(author.mention + " and " + user.mention + " dueled for " + str(randint(2, 120)) +
+                               " gruesome hours! It was a long, heated battle, but " +
+                               choice([author.mention, user.mention]) + " came out victorious!")
 
-        await self.bot.type()
+    @commands.command(pass_context=True)
+    async def love(self, ctx, user: discord.Member):
+        """Found your one true love?"""
+        author = ctx.message.author
+        if user.id == self.bot.user.id:
+            await self.bot.say("I am not capable of loving like you can. I'm sorry.")
+        else:
+            await self.bot.say(author.mention + " is capable of loving " + user.mention + " a whopping " + str(randint(0, 100)) + "%!")
 
-        if number > 10:
-            await self.bot.reply(cf.warning("Be reasonable, please."))
-            return
+    @commands.command(pass_context=True)
+    async def squat(self, ctx):
+        """How is your workout going?"""
+        author = ctx.message.author
+        await self.bot.say(author.mention + " puts on their game face and does " + str(randint(2, 1000)) +
+                           " squats in " + str(randint(4, 90)) + " minutes. Wurk it!")
 
-        async with aiohttp.get(self.url.format(number)) as response:
-            for fact in json.loads(await response.text())["facts"]:
-                await self.bot.say(fact)
-                await asyncio.sleep(0.25)
+    @commands.command(pass_context=True)
+    async def pizza(self, ctx):
+        """How many slices of pizza have you eaten today?"""
+        author = ctx.message.author
+        await self.bot.say(author.mention + " has eaten " + str(randint(2, 120)) + " slices of pizza today.")
+
+    @commands.command(pass_context=True)
+    async def bribe(self, ctx):
+        """Find out who is paying under the table"""
+        author = ctx.message.author
+        await self.bot.say(author.mention + " has bribed " + self.bot.user.mention + " with " +
+                           str(randint(10, 10000)) + " dollars!")
+
+    @commands.command(pass_context=True)
+    async def daddy(self, ctx):
+        author = ctx.message.author
+        await self.bot.say("I'm kink shaming you, " + author.mention)
+
+    @commands.command()
+    async def calculated(self):
+        await self.bot.say("That was " + str(randint(0, 100)) + "% calculated!")
+
+    @commands.command()
+    async def butts(self):
+        await self.bot.say("ლ(́◉◞౪◟◉‵ლ)")
+
+    @commands.command(name="commands")
+    async def _commands(self):
+        await self.bot.say("Don't tell me what to do.")
+
+    @commands.command()
+    async def flirt(self):
+        await self.bot.say("xoxoxoxoxo ;)) ))) hey b a b e ; ; ;))) ) ;)")
+
+    @commands.command()
+    async def updog(self):
+        await self.bot.say("What's updog?")
 
 
-def setup(bot: commands.Bot):
-    bot.add_cog(PieFact(bot))
+    @commands.command()
+    async def piefact(self):
+        lines = open('file.txt').read().splitlines()
+        piefact = random.choice(lines)
+        await self.bot.say(piefact)
+
+
+def setup(bot):
+    n = Fun(bot)
+    bot.add_cog(n)

@@ -1,0 +1,9 @@
+{
+    "AUTHOR" : "Shibe",
+    "INSTALL_MSG" : "Thanks for installing!",
+    "NAME" : "ShibeBot",
+    "SHORT" : "Things",
+    "DESCRIPTION" : "Just shibe things",
+    "REQUIREMENTS" : [],
+    "TAGS": ["facts", "pie", "random", "fun"]
+}
