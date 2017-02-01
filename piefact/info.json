@@ -1,0 +1,9 @@
+{
+    "AUTHOR" : "Shibe",
+    "INSTALL_MSG" : "Thanks for installing!",
+    "NAME" : "PieFact",
+    "SHORT" : "Get random pie facts.",
+    "DESCRIPTION" : "Gets the given number of pie facts. Creds:Tmerc",
+    "REQUIREMENTS" : [],
+    "TAGS": ["facts", "pie", "random", "fun"]
+}
