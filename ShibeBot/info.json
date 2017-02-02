@@ -2,7 +2,7 @@
     "AUTHOR" : "Shibe",
     "INSTALL_MSG" : "Thanks for installing!",
     "NAME" : "ShibeBot",
-    "SHORT" : "ShibeBot",
+    "SHORT" : "ShibeCommands",
     "DESCRIPTION" : "Just shibe things",
     "REQUIREMENTS" : [],
     "TAGS": ["facts", "pie", "random", "fun"]
