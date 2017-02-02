@@ -19,7 +19,7 @@ class Shibe:
         await self.bot.say(" :v: SUH DUDE :v: ")
 
     @commands.command()
-    async def ark(self, ctx):
+    async def ark(self):
         colour = ''.join([choice('0123456789ABCDEF') for x in range(6)])
         colour = int(colour, 16)
 
@@ -27,11 +27,11 @@ class Shibe:
         empty = u"\u2063"
         emptyrand = empty * randnum
 
-        data = discord.Embed(title=str(
+        data = discord.Embed(
             "Click To Connect to Mandrew ARK"
             "steam://connect/71.93.28.250:27015"
             "Whisper a Doge Master for the password"
-            "NOTE: If it's your first time, You'll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client inbetween reconnects"), colour=discord.Colour(value=colour))
+            "NOTE: If it's your first time, You'll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client inbetween reconnects"), colour=discord.Colour(value=colour)
 
         if ctx.message.author.avatar_url:
             data.set_author(name=ctx.message.author.name,
