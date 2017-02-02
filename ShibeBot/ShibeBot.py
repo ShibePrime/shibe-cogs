@@ -22,7 +22,7 @@ class Shibe:
     async def ark(self):
         em = discord.Embed(title='My Embed Title', description='My Embed Content.', colour=0xDEADBF)
         em.set_author(name='Mandrew ARK', icon_url='http://i.imgur.com/mYdLixs.png')
-        await self.bot.say(message.channel, embed=em)
+        await self.bot.say(embed=em)
 
 
 def setup(bot):
