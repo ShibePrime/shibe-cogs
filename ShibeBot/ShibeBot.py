@@ -20,29 +20,10 @@ class Shibe:
 
     @commands.command()
     async def ark(self):
-        colour = ''.join([choice('0123456789ABCDEF') for x in range(6)])
-        colour = int(colour, 16)
+    em = discord.Embed(title='My Embed Title', description='My Embed Content.', colour=0xDEADBF)
+    em.set_author(name='Someone', icon_url=client.user.default_avatar_url)
+        await client.send_message(message.channel, embed=em)
 
-        randnum = randint(1, 10)
-        empty = u"\u2063"
-        emptyrand = empty * randnum
-
-        data = discord.Embed(
-            "Click To Connect to Mandrew ARK"
-            "steam://connect/71.93.28.250:27015"
-            "Whisper a Doge Master for the password"
-            "NOTE: If it's your first time, You'll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client inbetween reconnects"), colour=discord.Colour(value=colour)
-
-        if ctx.message.author.avatar_url:
-            data.set_author(name=ctx.message.author.name,
-                            url=ctx.message.author.avatar_url, icon_url=ctx.message.author.avatar_url)
-        else:
-            data.set_author(name=ctx.message.author.name)
-
-        try:
-            await self.bot.say(emptyrand, embed=data)
-        except:
-            await self.bot.say("I need the `Embed links` permission to send this")
 
 def setup(bot):
     n = Shibe(bot)
