@@ -17,7 +17,7 @@ class Shibe:
     @commands.command()
     async def ark(self):
         await self.bot.say("Click To Connect to Mandrew ARK")
-        await self.bot.say(":lizard: :dragon: steam://connect/71.93.28.250:27015 :dragon: :lizard: ")
+        await self.bot.say("steam://connect/71.93.28.250:27015")
 
 def setup(bot):
     n = Shibe(bot)
