@@ -12,7 +12,7 @@ class Shibe:
 
     @commands.command()
     async def suh(self):
-        await self.bot.say(" :snake:  SUH DUDE :snake: ")
+        await self.bot.say(" :suhdude: SUH DUDE :suhdude: ")
 
 def setup(bot):
     n = Shibe(bot)
