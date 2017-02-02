@@ -17,9 +17,9 @@ class Shibe:
     @commands.command()
     async def ark(self):
         data = "Click To Connect to Mandrew ARK"
-"steam://connect/71.93.28.250:27015"
-"Whisper a Doge Master for the password"
-"NOTE: If it's your first time, You'll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client inbetween reconnects"
+        "steam://connect/71.93.28.250:27015"
+        "Whisper a Doge Master for the password"
+        "NOTE: If it's your first time, You'll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client inbetween reconnects"
         await self.bot.say(embed=data)
 
 def setup(bot):
