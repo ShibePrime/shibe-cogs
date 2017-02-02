@@ -1,16 +1,16 @@
 # noinspection PyUnresolvedReferences
 import discord
+import random
 from discord.ext import commands
 from cogs.utils import checks
 from cogs.utils.chat_formatting import box,  pagify, escape_mass_mentions
 from random import choice, randint
-import datetime
-import random
+
 
 __author__ = "shibe "
 
 class Shibe:
-    """fun random commands"""
+    """Shibe's Commands"""
 
     def __init__(self, bot):
         self.bot = bot
