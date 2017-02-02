@@ -80,13 +80,6 @@ class Fun:
         await self.bot.say("What's updog?")
 
 
-    @commands.command()
-    async def piefact(self):
-        lines = open('file.txt').read().splitlines()
-        piefact = random.choice(lines)
-        await self.bot.say(piefact)
-
-
 def setup(bot):
     n = Fun(bot)
     bot.add_cog(n)
