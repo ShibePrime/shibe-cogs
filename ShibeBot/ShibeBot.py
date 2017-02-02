@@ -19,7 +19,7 @@ class Shibe:
         await self.bot.say(" :v: SUH DUDE :v: ")
 
     @commands.command()
-    async def ark(self, ctx, *):
+    async def ark(self, ctx):
         colour = ''.join([choice('0123456789ABCDEF') for x in range(6)])
         colour = int(colour, 16)
 
