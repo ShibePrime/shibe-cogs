@@ -21,7 +21,7 @@ class Shibe:
     @commands.command()
     async def ark(self):
         em = discord.Embed(title='My Embed Title', description='My Embed Content.', colour=0xDEADBF)
-        em.set_author(name='Someone', icon_url=client.user.default_avatar_url)
+        em.set_author(name='Someone', icon_url=http://i.imgur.com/mYdLixs.png)
         await client.send_message(message.channel, embed=em)
 
 
