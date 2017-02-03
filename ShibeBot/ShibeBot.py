@@ -5,6 +5,7 @@ from discord.ext import commands
 from cogs.utils import checks
 from cogs.utils.chat_formatting import box,  pagify, escape_mass_mentions
 from random import choice, randint
+import xkcd
 
 
 __author__ = "shibe "
@@ -44,6 +45,23 @@ class Shibe:
         lines = open('{}/piefacts/piefacts.txt'.format(self.base)).read().splitlines()
         piefact = random.choice(lines)
         await self.bot.say(piefact)
+
+            @commands.group(name="xkcd", pass_context=True)
+    async def xkcd(self, ctx):
+        """Displays latest xkcd comic."""
+        if ctx.invoked_subcommand is None:
+            await self.bot.say(xkcd.getLatestComic().getImageLink())
+
+    @xkcd.command(name="random", pass_context=True)
+    async def _random(self, ctx):
+        """Displays random xkcd comic."""
+        await self.bot.say(xkcd.getRandomComic().getImageLink())
+
+    @xkcd.command(name="number", pass_context=True)
+    async def _number(self, ctx, number: int):
+        """Displays specified xkcd comic."""
+        await self.bot.say(xkcd.getComic(number).getImageLink())
+
 
 def setup(bot):
     n = Shibe(bot)
