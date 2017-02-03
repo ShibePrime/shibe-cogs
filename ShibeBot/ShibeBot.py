@@ -14,11 +14,11 @@ class Shibe:
 
     def __init__(self, bot):
         self.bot = bot
-        self.base = 'data/shibebot/images/'
+        self.base = 'data/shibebot/'
 
     @commands.command(pass_context=True)
     async def yoshi(self, context):
-        await self.bot.send_file(context.message.channel, '{}yoshi.png'.format(self.base))
+        await self.bot.send_file(context.message.channel, '{}images/yoshi.png'.format(self.base))
 
     @commands.command()
     async def suh(self):
@@ -35,7 +35,7 @@ class Shibe:
     @commands.command()
     async def piefact(self):
         """100 Percent PieFacts"""
-        lines = open('file.txt').read().splitlines()
+        lines = open('{}images/piefacts.txt').read().splitlines()
         piefact = random.choice(lines)
         await self.bot.say(piefact)
 
