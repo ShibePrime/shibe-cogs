@@ -35,7 +35,7 @@ class Shibe:
     @commands.command()
     async def piefact(self):
         """100 Percent PieFacts"""
-        lines = open('{}images/piefacts.txt').read().splitlines()
+        lines = open('{}piefacts/piefacts.txt').read().splitlines()
         piefact = random.choice(lines)
         await self.bot.say(piefact)
 
