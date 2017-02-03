@@ -45,7 +45,7 @@ class Shibe:
         lines = open('{}/piefacts/piefacts.txt'.format(self.base)).read().splitlines()
         piefact = random.choice(lines)
         await self.bot.say(piefact)
-
+#xkcd by ultimatePancake
     @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
         """Displays latest xkcd comic."""
