@@ -14,6 +14,11 @@ class Shibe:
 
     def __init__(self, bot):
         self.bot = bot
+        self.base = 'data/shibebot/images/'
+
+    @commands.command(pass_context=True)
+    async def yoshi(self, context):
+        await self.bot.send_file(context.message.channel, '{}yoshi.png'.format(self.base))
 
     @commands.command()
     async def suh(self):
