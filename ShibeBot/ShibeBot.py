@@ -46,7 +46,7 @@ class Shibe:
         piefact = random.choice(lines)
         await self.bot.say(piefact)
 
-            @commands.group(name="xkcd", pass_context=True)
+    @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
         """Displays latest xkcd comic."""
         if ctx.invoked_subcommand is None:
