@@ -27,6 +27,12 @@ class Shibe:
         """SHIBE"""
         await self.bot.send_file(context.message.channel, '{}images/shibe.png'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def order66(self, context):
+        """order66"""
+        await self.bot.send_file(context.message.channel, '{}images/order66.gif'.format(self.base))
+
+
     @commands.command()
     async def suh(self):
         """suh dude"""
