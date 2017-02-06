@@ -39,8 +39,18 @@ class Shibe:
 
     @commands.command(pass_context=True)
     async def ringer(self, context):
-        """order66"""
+        """ringer"""
         await self.bot.send_file(context.message.channel, '{}images/ringer.gif'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def claiborne(self, context):
+        """claiborne"""
+        await self.bot.send_file(context.message.channel, '{}images/claiborne.jpg'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def claiborne(self, context):
+        """jeff"""
+        await self.bot.send_file(context.message.channel, '{}images/jeff.png'.format(self.base))
 
 
     @commands.command()
