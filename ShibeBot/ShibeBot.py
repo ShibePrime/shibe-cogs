@@ -59,8 +59,13 @@ class Shibe:
 
     @commands.command(pass_context=True)
     async def doge(self, context):
-        """underpowered"""
+        """doge"""
         await self.bot.send_file(context.message.channel, '{}images/doge.png'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def muffin(self, context):
+        """muffin"""
+        await self.bot.send_file(context.message.channel, '{}images/muffin.png'.format(self.base))
 
 
     @commands.command()
