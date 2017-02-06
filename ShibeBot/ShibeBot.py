@@ -48,7 +48,7 @@ class Shibe:
         await self.bot.send_file(context.message.channel, '{}images/claiborne.jpg'.format(self.base))
 
     @commands.command(pass_context=True)
-    async def claiborne(self, context):
+    async def jeff(self, context):
         """jeff"""
         await self.bot.send_file(context.message.channel, '{}images/jeff.png'.format(self.base))
 
