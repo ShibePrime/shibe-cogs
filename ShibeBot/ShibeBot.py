@@ -52,6 +52,11 @@ class Shibe:
         """jeff"""
         await self.bot.send_file(context.message.channel, '{}images/jeff.png'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def underpowered(self, context):
+        """jeff"""
+        await self.bot.send_file(context.message.channel, '{}images/underpowered.gif'.format(self.base))
+
 
     @commands.command()
     async def suh(self):
