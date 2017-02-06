@@ -37,6 +37,11 @@ class Shibe:
         """order66"""
         await self.bot.send_file(context.message.channel, '{}images/order66.gif'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def ringer(self, context):
+        """order66"""
+        await self.bot.send_file(context.message.channel, '{}images/ringer.gif'.format(self.base))
+
 
     @commands.command()
     async def suh(self):
