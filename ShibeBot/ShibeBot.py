@@ -67,6 +67,11 @@ class Shibe:
         """muffin"""
         await self.bot.send_file(context.message.channel, '{}images/muffin.png'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def rex(self, context):
+        """rex"""
+        await self.bot.send_file(context.message.channel, '{}images/rex.jpg'.format(self.base))
+
 
     @commands.command()
     async def suh(self):
