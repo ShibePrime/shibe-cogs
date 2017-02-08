@@ -72,6 +72,11 @@ class Shibe:
         """rex"""
         await self.bot.send_file(context.message.channel, '{}images/rex.jpg'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def potato(self, context):
+        """potato"""
+        await self.bot.send_file(context.message.channel, '{}images/potato.png'.format(self.base))
+
 
     @commands.command()
     async def suh(self):
