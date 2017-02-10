@@ -80,7 +80,7 @@ class Shibe:
     @commands.command(pass_context=True)
     async def moo(self, context):
         """moo"""
-        await self.bot.send_file(context.message.channel, '{}images/moo.png'.format(self.base))
+        await self.bot.send_file(context.message.channel, '{}images/cody.png'.format(self.base))
 
 
     @commands.command()
