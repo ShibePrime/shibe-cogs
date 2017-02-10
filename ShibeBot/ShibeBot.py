@@ -24,7 +24,7 @@ class Shibe:
 
     @commands.command(pass_context=True)
     async def bossbattle(self, context):
-        """YOSHI"""
+        """Boss Battles be like"""
         await self.bot.send_file(context.message.channel, '{}images/bossbattle.gif'.format(self.base))
 
     @commands.command(pass_context=True)
@@ -76,6 +76,11 @@ class Shibe:
     async def potato(self, context):
         """potato"""
         await self.bot.send_file(context.message.channel, '{}images/potato.png'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def moo(self, context):
+        """moo"""
+        await self.bot.send_file(context.message.channel, '{}images/moo.png'.format(self.base))
 
 
     @commands.command()
