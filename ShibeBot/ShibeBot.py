@@ -82,6 +82,11 @@ class Shibe:
         """moo"""
         await self.bot.send_file(context.message.channel, '{}images/cody.png'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def pie(self, context):
+        """pie"""
+        await self.bot.send_file(context.message.channel, '{}images/pie.png'.format(self.base))
+
 
     @commands.command()
     async def suh(self):
