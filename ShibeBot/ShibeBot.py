@@ -85,7 +85,7 @@ class Shibe:
         await self.bot.send_file(context.message.channel, '{}images/cody.png'.format(self.base))
 
     @commands.command(pass_context=True)
-    async def pie(self, context):
+    async def pie(self, ctx):
         """pie"""
         await self.bot.delete_message(ctx.message)
         await self.bot.send_file(context.message.channel, '{}images/pie.png'.format(self.base))
