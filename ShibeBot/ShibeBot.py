@@ -89,8 +89,9 @@ class Shibe:
 
 
     @commands.command()
-    async def suh(self):
+    async def suh(self, ctx):
         """suh dude"""
+        await self.bot.delete_message(ctx.message)
         await self.bot.say(" :v: SUH DUDE :v: ")
 
     @commands.command()
