@@ -88,7 +88,7 @@ class Shibe:
         await self.bot.send_file(context.message.channel, '{}images/pie.png'.format(self.base))
 
 
-    @commands.command()
+    @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
     async def suh(self, ctx, *):
         """suh dude"""
         await self.bot.delete_message(ctx.message)
