@@ -22,3 +22,10 @@ To install the cogs, Follow the given steps:
 > If it has any library dependencies, type ``pip3 install [library_name]`` in git.
 > 
 > Once the module has loaded up, type yes.
+
+# Cog Descriptions
+**ShibeBot**
+> This is where I slam a bunch of random code into a single cog and hope it works. Tons of specific commands that are only relevant on a certain server. Not intended for general use. 
+
+**InsertFutureCogsHere**
+> This is where I'll tell you what the next cog I make does. 
