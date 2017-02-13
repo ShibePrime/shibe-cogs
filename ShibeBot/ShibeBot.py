@@ -106,6 +106,7 @@ class Shibe:
         lines = open('{}/piefacts/piefacts.txt'.format(self.base)).read().splitlines()
         piefact = random.choice(lines)
         await self.bot.say(piefact)
+
 #xkcd by ultimatePancake
     @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
@@ -122,7 +123,7 @@ class Shibe:
     async def _number(self, ctx, number: int):
         """Displays specified xkcd comic."""
         await self.bot.say(xkcd.getComic(number).getImageLink())
-
+#xkcd by ultimatePancake
 
 def setup(bot):
     n = Shibe(bot)
