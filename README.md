@@ -1,5 +1,8 @@
 # shibe-cogs
-Shibe's Cogs for Red-DiscordBot. Red-DiscordBot is a multipurpose bot for Discord developed by Twentysix26.
+Shibe's Cogs for Red-DiscordBot. 
+
+Red-DiscordBot is a multipurpose bot for Discord developed by Twentysix26.
+Found here - https://github.com/Twentysix26/Red-DiscordBot
 
 # Installation
 To install the cogs, Follow the given steps:
