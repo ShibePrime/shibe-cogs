@@ -27,5 +27,9 @@ To install the cogs, Follow the given steps:
 **ShibeBot**
 > This is where I slam a bunch of random code into a single cog and hope it works. Tons of specific commands that are only relevant on a certain server. Not intended for general use. 
 
+**wowtoken** 
+>Gets the current price of the NA WoW token.
+>requires [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [pypandoc](https://github.com/bebraw/pypandoc), and [Pandoc](http://pandoc.org/).
+
 **InsertFutureCogsHere**
 > This is where I'll tell you what the next cog I make does. 
