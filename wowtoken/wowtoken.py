@@ -60,7 +60,7 @@ class WoWToken:
                 await self.bot.say(embed=em)
 
         except:
-            await self.bot.say("Error")
+            await self.bot.say(embed=em)
 
 
 def setup(bot):
