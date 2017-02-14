@@ -24,13 +24,6 @@ except:
 # Pandoc :: http://pandoc.org/
 
 base_url = 'https://wowtoken.info/'
-product_url = '/patch-notes?productType='
-hearthstone_abbr = 'wtcg'
-overwatch_abbr = 'Pro'
-starcraft2_abbr = 'sc2'
-warcraft_abbr = 'WoW'
-diablo_abbr = 'd3'
-hots_abbr = 'heroes'
 headers = {'User-Agent': 'Battle.net/1.0.8.4217'}
 
 
@@ -54,7 +47,7 @@ class WoWToken:
             async with aiohttp.get(url, headers=headers) as response:
                 soup = BeautifulSoup(await response.text(), "html.parser")
 
-            html_notes = soup.find('div', {"class": "mui-panel realm-panel" , "id": "na-panel"})
+            html_notes = soup.find('div', {"id": "NA-buy"})
             text_notes = pypandoc.convert_text(html_notes, 'plain',
                                                format='html',
                                                extra_args=['--wrap=none'])
