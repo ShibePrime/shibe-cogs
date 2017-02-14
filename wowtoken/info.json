@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Shibe",
+    "INSTALL_MSG" : "Thanks for installing!",
+    "NAME" : "wowtoken",
+    "DESCRIPTION" : "Checks the current price of wowtoken, WIP",
+    "REQUIREMENTS" : [],
+    "TAGS": ["wow", "auction", "game", "fun"]
+}
