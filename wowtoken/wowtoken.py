@@ -53,7 +53,7 @@ class WoWToken:
                                                extra_args=['--wrap=none'])
             text_notes = text_notes.replace('&nbsp;', ' ')
             text_notes = text_notes.replace('&apos;', "'")
-                await self.bot.say(text_notes)
+            await self.bot.say(text_notes)
 
         except:
             await self.bot.say("Error")
