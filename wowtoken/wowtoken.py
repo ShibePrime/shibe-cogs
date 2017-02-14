@@ -54,13 +54,11 @@ class WoWToken:
             text_notes = text_notes.replace('&nbsp;', ' ')
             text_notes = text_notes.replace('&apos;', "'")
             msg_list = pagify(text_notes, delims=["\n"])
-            em = discord.Embed(title='WoW Token Info',description=msg_list, colour=0xDEADBF)
-            em.set_author(name='ShibeBot', icon_url='http://img00.deviantart.net/0314/i/2012/166/a/c/wow_token_light_by_scrubnoob-d53nfuq.png')
             for msg in msg_list:
-                await self.bot.say(embed=em)
+                await self.bot.say(msg_list)
 
         except:
-            await self.bot.say(embed=em)
+            await self.bot.say("Error")
 
 
 def setup(bot):
