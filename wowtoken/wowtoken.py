@@ -55,7 +55,7 @@ class WoWToken:
             text_notes = text_notes.replace('&apos;', "'")
             msg_list = pagify(text_notes, delims=["\n"])
             for msg in msg_list:
-                await self.bot.say(msg)
+                await self.bot.say(embed=msg)
 
         except:
             await self.bot.say("Error")
