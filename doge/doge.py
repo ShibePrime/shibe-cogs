@@ -15,7 +15,7 @@ class Shibe:
 
     def __init__(self, bot):
         self.bot = bot
-        self.base = 'data/shibebot/'
+        self.base = 'data/doge/'
 
 
 #--Start Much E-sports Image embeds , Images go in /data/images/
