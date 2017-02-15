@@ -53,7 +53,7 @@ class WoWToken:
                                                extra_args=['--wrap=none'])
             text_notes = text_notes.replace('&nbsp;', ' ')
             text_notes = text_notes.replace('&apos;', "'")
-            em = discord.Embed(title='WoW Token Info', description=html_notes, colour=0xFFD966)
+            em = discord.Embed(title='WoW Token Info', description=``` + html_notes + ```, colour=0xFFD966)
             em.set_author(name='ShibeBot', icon_url='https://pbs.twimg.com/profile_images/586731244467150849/U4TyFhW8.jpg')
             await self.bot.say(embed=em)
 
