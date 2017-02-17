@@ -97,6 +97,12 @@ class Shibe:
         await self.bot.delete_message(ctx.message)
         await self.bot.say(":v: SUH DUDE :v: ")
 
+    @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
+    async def greg(self, ctx):
+        """ShibeBot , ATTACK!"""
+        await self.bot.delete_message(ctx.message)
+        await self.bot.say("ShibeBot growls and attacks Greg's face")
+
     @commands.command()
     async def ark(self):
         """Get's link for Mandrew ARK"""
