@@ -103,7 +103,7 @@ class Shibe:
         await self.bot.delete_message(ctx.message)
         await self.bot.say(":v: SUH DUDE :v: ")
 
-    @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
+    @commands.command(pass_context=True, no_pm=True)
     async def greg(self, ctx):
         """ShibeBot , ATTACK!"""
         await self.bot.delete_message(ctx.message)
