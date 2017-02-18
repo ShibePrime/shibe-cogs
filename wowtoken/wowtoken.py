@@ -15,7 +15,7 @@ try:  # check if pypandoc is installed
 except:
     pypandoc_available = False
 
-# All Credit for awesome code goes to https://github.com/ptoast/FlapJack-Cogs 
+# All Credit for awesome code goes to https://github.com/ptoast/FlapJack-Cogs
 
 # This cog requires:
 # BeautifulSoup4 :: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
@@ -52,6 +52,7 @@ class WoWToken:
                                                extra_args=['--wrap=none'])
             text_notes = text_notes.replace('&nbsp;', ' ')
             text_notes = text_notes.replace('&apos;', "'")
+#this is the only way I know howto cleanup the formatting. pls halp @TheRealShibe
             text_notes = text_notes.replace('+', "")
             text_notes = text_notes.replace('-', "")
             text_notes = text_notes.replace('-', "")
@@ -61,7 +62,6 @@ class WoWToken:
             text_notes = text_notes.replace("API Result", "API Result \n")
             text_notes = text_notes.replace("Updated", "Updated \n")
             em = discord.Embed(title='WoW Token Info', description=text_notes, colour=0xFFD966)
-            em.set_author(name='ShibeBot', icon_url='https://pbs.twimg.com/profile_images/586731244467150849/U4TyFhW8.jpg')
             await self.bot.say(embed=em)
 
         except:
