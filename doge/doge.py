@@ -18,7 +18,7 @@ class Shibe:
         self.base = 'data/doge/'
 
 
-#--Start Much E-sports Image embeds , Images go in /data/images/
+# --Start Much E-sports Image embeds , Images go in /data/images/
     @commands.command(pass_context=True)
     async def yoshi(self, context):
         """YOSHI"""
@@ -95,7 +95,7 @@ class Shibe:
         """hadoken"""
         await self.bot.delete_message(ctx.message)
         await self.bot.send_file(ctx.message.channel, '{}images/hadoken.gif'.format(self.base))
-#--END Image embeds
+# --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
     async def suh(self, ctx):
@@ -123,7 +123,7 @@ class Shibe:
         piefact = random.choice(lines)
         await self.bot.say(piefact)
 
-#--xkcd by ultimatePancake
+# --xkcd by ultimatePancake
     @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
         """Displays latest xkcd comic."""
@@ -139,7 +139,8 @@ class Shibe:
     async def _number(self, ctx, number: int):
         """Displays specified xkcd comic."""
         await self.bot.say(xkcd.getComic(number).getImageLink())
-#--
+# --
+
 
 def setup(bot):
     n = Shibe(bot)
