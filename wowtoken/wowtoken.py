@@ -15,8 +15,7 @@ try:  # check if pypandoc is installed
 except:
     pypandoc_available = False
 
-# Special thanks to judge2020 for telling me about pandoc, and offering their
-# code as a reference: https://github.com/judge2020/BattleNetUpdateChecker
+# All Credit for awesome code goes to https://github.com/ptoast/FlapJack-Cogs 
 
 # This cog requires:
 # BeautifulSoup4 :: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
