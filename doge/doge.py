@@ -95,6 +95,12 @@ class Shibe:
         """hadoken"""
         await self.bot.delete_message(ctx.message)
         await self.bot.send_file(ctx.message.channel, '{}images/hadoken.gif'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def summongreg(self, ctx):
+        """summon greg"""
+        await self.bot.delete_message(ctx.message)
+        await self.bot.send_file(ctx.message.channel, '{}images/summongreg.gif'.format(self.base))
 # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
