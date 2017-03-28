@@ -20,15 +20,13 @@ class Shibe:
 
 # --Start Much E-sports Image embeds , Images go in /data/images/
     @commands.command(pass_context=True)
-    async def yoshi(self, ctx):
+    async def yoshi(self, context):
         """YOSHI"""
-        await self.bot.delete_message(ctx.message)
         await self.bot.send_file(context.message.channel, '{}images/yoshi.png'.format(self.base))
 
     @commands.command(pass_context=True)
-    async def bun(self, ctx):
+    async def bun(self, context):
         """bun"""
-        await self.bot.delete_message(ctx.message)
         await self.bot.send_file(context.message.channel, '{}images/bun.png'.format(self.base))
 
     @commands.command(pass_context=True)
