@@ -22,11 +22,13 @@ class Shibe:
     @commands.command(pass_context=True)
     async def yoshi(self, context):
         """YOSHI"""
+        await self.bot.delete_message(ctx.message)
         await self.bot.send_file(context.message.channel, '{}images/yoshi.png'.format(self.base))
 
     @commands.command(pass_context=True)
-    async def yoshi(self, context):
+    async def bun(self, context):
         """bun"""
+        await self.bot.delete_message(ctx.message)
         await self.bot.send_file(context.message.channel, '{}images/bun.png'.format(self.base))
 
     @commands.command(pass_context=True)
