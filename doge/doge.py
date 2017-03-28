@@ -25,6 +25,11 @@ class Shibe:
         await self.bot.send_file(context.message.channel, '{}images/yoshi.png'.format(self.base))
 
     @commands.command(pass_context=True)
+    async def yoshi(self, context):
+        """bun"""
+        await self.bot.send_file(context.message.channel, '{}images/bun.png'.format(self.base))
+
+    @commands.command(pass_context=True)
     async def bossbattle(self, context):
         """Boss Battles be like"""
         await self.bot.send_file(context.message.channel, '{}images/bossbattle.gif'.format(self.base))
