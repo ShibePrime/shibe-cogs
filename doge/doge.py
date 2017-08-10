@@ -105,6 +105,11 @@ class Shibe:
     async def summongreg(self, ctx):
         """summon greg"""
         await self.bot.send_file(ctx.message.channel, '{}images/summongreg.gif'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def scoofy(self, context):
+        """scoofy"""
+        await self.bot.send_file(context.message.channel, '{}images/scoofy.jpg'.format(self.base))
 # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
