@@ -137,6 +137,13 @@ class Shibe:
         piefact = random.choice(lines)
         await self.bot.say(piefact)
 
+    @commands.command()
+    async def pecker(self):
+        """Howto be safe"""
+        lines = open('{}/pecker/pecker.txt'.format(self.base)).read().splitlines()
+        piefact = random.choice(lines)
+        await self.bot.say(pecker)
+
 # --xkcd by ultimatePancake
     @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
