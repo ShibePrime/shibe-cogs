@@ -114,6 +114,11 @@ class Shibe:
     async def fine(self, context):
         """fine"""
         await self.bot.send_file(context.message.channel, '{}images/fine.png'.format(self.base))
+
+    @commands.command(pass_context=True)
+    async def jack(self, context):
+        """jack"""
+        await self.bot.send_file(context.message.channel, '{}images/jack.png'.format(self.base))
 # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
