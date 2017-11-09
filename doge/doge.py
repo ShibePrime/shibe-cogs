@@ -116,6 +116,12 @@ class Shibe:
         await self.bot.send_file(context.message.channel, '{}images/fine.png'.format(self.base))
 
     @commands.command(pass_context=True)
+    async def counter(self, context):
+        """counter"""
+        await self.bot.send_file(context.message.channel, '{}images/counter.png'.format(self.base))
+
+
+    @commands.command(pass_context=True)
     async def jack(self, context):
         """jack"""
         await self.bot.send_file(context.message.channel, '{}images/jack.png'.format(self.base))
