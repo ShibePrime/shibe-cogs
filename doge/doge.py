@@ -167,7 +167,7 @@ class Shibe:
 # --xkcd by ultimatePancake
     @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
-        """Displays latest xkcd comic."""
+        """Displays latest xkcd comic"""
         if ctx.invoked_subcommand is None:
             await self.bot.say(xkcd.getLatestComic().getImageLink())
 
