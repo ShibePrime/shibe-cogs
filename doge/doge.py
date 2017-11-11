@@ -159,7 +159,7 @@ class Shibe:
 
     @commands.command()
     async def pecker(self):
-        """Howto be safe"""
+        """How-to be safe"""
         lines = open('{}/pecker/pecker.txt'.format(self.base)).read().splitlines()
         pecker = random.choice(lines)
         await self.bot.say(pecker)
