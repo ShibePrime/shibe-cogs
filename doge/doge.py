@@ -11,7 +11,7 @@ import xkcd
 __author__ = "shibe "
 
 class Shibe:
-    """Shibe's Commands"""
+    """ShibeBot's Commands"""
 
     def __init__(self, bot):
         self.bot = bot
