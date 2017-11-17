@@ -78,7 +78,7 @@ class ddb:
                 print(nightfallInfo)
                 print(imageurl)
                 em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966)
-                em.set_author(name='Destiny Weekly Info', icon_url='https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/4de13648c3bf8741e773d8e7e8a0164b.png',url="http://db.destinytracker.com/d2/en")
+                em.set_author(name='Destiny Weekly Info', icon_url="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/4de13648c3bf8741e773d8e7e8a0164b.png",url="http://db.destinytracker.com/d2/en")
                 await self.bot.say(embed=em)
 
 
