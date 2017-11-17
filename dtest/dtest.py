@@ -60,4 +60,6 @@ class ddb:
 
         except:
             await self.bot.say("Error")
-bot.add_cog(ddb(bot))
+            
+def setup(bot):
+    bot.add_cog(ddb(bot))
