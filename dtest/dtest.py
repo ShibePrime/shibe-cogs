@@ -68,7 +68,7 @@ class ddb:
         async with ClientSession() as session:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
                 results = await response.text()
-                em = discord.Embed(title='Destiny Weekly Info', description=results[0], colour=0xFFD966)
+                em = discord.Embed(title='Destiny Weekly Info', description=results[1], colour=0xFFD966)
                 await self.bot.say(embed=em)
 
     async def print_notes(self):
