@@ -52,7 +52,7 @@ class ddb:
 
     async def print_notes(self, url):
         try:
-            async with aiohttp.post(url, data=json.dumps(payload), headers=headers) as response:
+            async with aiohttp.post(url, data=json.dumps(payload), headers=headers, verify_ssl=False) as response:
                 results = await response.text()
                 print(results)
                 soup = BeautifulSoup(await response.text(), "html.parser")
