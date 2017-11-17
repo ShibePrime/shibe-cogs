@@ -18,6 +18,7 @@ try:  # check if pypandoc is installed
     pypandoc_available = True
 except:
     pypandoc_available = False
+
 #:authority:db-api.destinytracker.com
 # :method:POST
 # :path:/api/graphql
@@ -32,6 +33,7 @@ except:
 # pragma:no-cache
 # referer:http://db.destinytracker.com/d2/en
 # user-agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+
 url = 'https://db-api.destinytracker.com/api/graphql'
 headers = {"authority": "db-api.destinytracker.com",
            "accept": "*/*",
@@ -67,13 +69,8 @@ class ddb:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
                 results = await response.text()
                 print(results)
-                soup = BeautifulSoup(await response.text(), "html.parser")
-                html_notes = soup.find('div', {"class": "home-page"})
-                text_notes = pypandoc.convert_text(html_notes, 'plain',
-                                                   format='html',
-                                                   extra_args=['--wrap=none'])
-                # text_notes = text_notes.replace('&nbsp;', ' ')
-                em = discord.Embed(title='Destiny Weekly Info', description=text_notes, colour=0xFFD966)
+                json.loads(results)
+                em = discord.Embed(title='Destiny Weekly Info', description=results, colour=0xFFD966)
                 await self.bot.say(embed=em)
 
     async def print_notes(self):
