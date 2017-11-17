@@ -43,7 +43,7 @@ class ddb:
 
     async def print_notes(self, url):
         try:
-            async with aiohttp.post(url, data=json.dumps(payload), headers=headers) as response:
+            async with aiohttp.post(url, json=payload, headers=headers) as response:
                 soup = BeautifulSoup(await response.text(), "html.parser")
 
             html_notes = soup.find('div', {"class": "home-page"})
