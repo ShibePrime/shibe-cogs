@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from .utils.chat_formatting import pagify
 import aiohttp
+import json
 
 try:  # check if BeautifulSoup4 is installed
     from bs4 import BeautifulSoup
@@ -44,7 +45,7 @@ class ddb:
 
     async def print_notes(self, url):
         try:
-            async with aiohttp.post(url, json=payload, headers=headers) as response:
+            async with aiohttp.post(url, data=json.dumps(payload), headers=headers) as response:
                 results = await response.text()
                 print(results)
                 soup = BeautifulSoup(await response.text(), "html.parser")
