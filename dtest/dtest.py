@@ -75,10 +75,10 @@ class ddb:
                                 activities["activity"]["description"] + "\n\n***Modifiers***\n" + \
                                 "**"+modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
                                 "**"+modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*"
-                print(nightfallInfo)
                 print(imageurl)
-                em = discord.Embed(title='Destiny Weekly Info', description=nightfallInfo, colour=0xFFD966)
-                em.set_author(icon_url=imageurl)
+                print(nightfallInfo)
+                em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966)
+                em.set_author(name='Destiny Weekly Info', icon_url=imageurl)
                 await self.bot.say(embed=em)
 
 
