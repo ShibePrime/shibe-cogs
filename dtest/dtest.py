@@ -62,7 +62,7 @@ class ddb:
     @commands.command(name="ddb", pass_context=True)
     async def ddb(self, ctx):
         """Scrapes db.destinytracker.com for infos"""
-        await self.print_notes()
+        await self.fetch()
 
     async def fetch(self):
         async with ClientSession() as session:
@@ -78,8 +78,6 @@ class ddb:
                 print(nightfallInfo)
                 em = discord.Embed(title='Destiny Weekly Info', description=nightfallInfo, colour=0xFFD966)
                 await self.bot.say(embed=em)
-
-
 
 
 def setup(bot):
