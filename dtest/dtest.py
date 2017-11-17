@@ -15,13 +15,6 @@ try:  # check if pypandoc is installed
 except:
     pypandoc_available = False
 
-# All Credit for awesome code goes to https://github.com/ptoast/FlapJack-Cogs
-
-# This cog requires:
-# BeautifulSoup4 :: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
-# pypandoc :: https://pypi.python.org/pypi/pypandoc
-# Pandoc :: http://pandoc.org/
-
 base_url = 'http://db.destinytracker.com/d2/en'
 headers = {'User-Agent': 'Mozilla/5.0'}
 
@@ -33,7 +26,7 @@ class ddb:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="db.destinytracker", pass_context=True)
+    @commands.command(name="ddb", pass_context=True)
     async def ddb(self, ctx):
         """Scrapes db.destinytracker.com for infos"""
 
@@ -46,7 +39,7 @@ class ddb:
             async with aiohttp.get(url, headers=headers) as response:
                 soup = BeautifulSoup(await response.text(), "html.parser")
 
-            html_notes = soup.find('div', {"class": "content"})
+            html_notes = soup.find('div', {"class": "home-page"})
             text_notes = pypandoc.convert_text(html_notes, 'plain',
                                                format='html',
                                                extra_args=['--wrap=none'])
