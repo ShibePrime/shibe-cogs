@@ -70,7 +70,7 @@ class ddb:
 
 def setup(bot):
     if soup_available and pypandoc_available:
-        bot.add_cog(WoWToken(bot))
+        bot.add_cog(dtest(bot))
     else:
         if not soup_available:
             error_text += "You need to run `pip install beautifulsoup4`\n"
