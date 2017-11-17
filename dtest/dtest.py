@@ -77,7 +77,7 @@ class ddb:
                                 modifiers[0]["name"] + ": " + modifiers["description"] + "\n" + \
                                 activities[1]["description"] + "\n\nModifiers:" + \
                                 modifiers[1]["name"] + ": " + modifiers["description"]
-                em = discord.Embed(title='Destiny Weekly Info', description=activities, colour=0xFFD966)
+                em = discord.Embed(title='Destiny Weekly Info', description=nightfallInfo, colour=0xFFD966)
                 await self.bot.say(embed=em)
 
     async def print_notes(self):
