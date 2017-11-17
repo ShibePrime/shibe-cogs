@@ -70,7 +70,7 @@ class ddb:
                 data = await response.json()
                 activities = data["data"]["activeMilestones"][0]["availableQuests"][0]["activities"]
                 modifiers = activities["modifiers"]
-                imageurl = activities["iconUrl"]
+                imageurl = data["data"]["activeMilestones"][0]["availableQuests"][0]["iconUrl"]
                 nightfallInfo = "__**" +activities["activity"]["name"] + "**__\n" + \
                                 activities["activity"]["description"] + "\n\n***Modifiers***\n" + \
                                 "**"+modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
