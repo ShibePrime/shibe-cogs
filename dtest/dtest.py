@@ -18,7 +18,7 @@ try:  # check if pypandoc is installed
 except:
     pypandoc_available = False
 
-base_url = 'http://db.destinytracker.com/d2/en'
+base_url = 'https://db-api.destinytracker.com/api/graphql'
 headers = {":authority": "db-api.destinytracker.com",
            ":method": "POST",
            ":path": "/api/graphql",
@@ -52,7 +52,7 @@ class ddb:
 
     async def print_notes(self, url):
         try:
-            async with aiohttp.post(url, data=json.dumps(payload), headers=headers, verify_ssl=False) as response:
+            async with aiohttp.post(url, data=json.dumps(payload), headers=headers) as response:
                 results = await response.text()
                 print(results)
                 soup = BeautifulSoup(await response.text(), "html.parser")
