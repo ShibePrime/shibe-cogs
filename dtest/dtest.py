@@ -39,9 +39,7 @@ class ddb:
     @commands.command(name="ddb", pass_context=True)
     async def ddb(self, ctx):
         """Scrapes db.destinytracker.com for infos"""
-
         url = ''.join([base_url])
-
         await self.print_notes(url)
 
     async def print_notes(self, url):
@@ -60,6 +58,6 @@ class ddb:
 
         except:
             await self.bot.say("Error")
-            
+
 def setup(bot):
     bot.add_cog(ddb(bot))
