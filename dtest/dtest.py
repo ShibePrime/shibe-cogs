@@ -22,7 +22,14 @@ base_url = 'http://db.destinytracker.com/d2/en'
 headers = {":authority": "db-api.destinytracker.com",
            ":method": "POST",
            ":path": "/api/graphql",
+           ":scheme": "https",
+           "accept": "/",
+           "accept-encoding": "gzip, deflate, br",
+           "accept-language": "en",
+           "cache-control": "no-cache",
+           "content-length": "1004",
            "content-type": "application/json",
+           "origin": "http://db.destinytracker.com",
            "referer": "http://db.destinytracker.com/d2/en",
            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
            }
