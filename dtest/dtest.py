@@ -79,11 +79,7 @@ class ddb:
                 em = discord.Embed(title='Destiny Weekly Info', description=nightfallInfo, colour=0xFFD966)
                 await self.bot.say(embed=em)
 
-    async def print_notes(self):
-        try:
-            await self.fetch()
-        except:
-            await self.bot.say("Error")
+
 
 
 def setup(bot):
