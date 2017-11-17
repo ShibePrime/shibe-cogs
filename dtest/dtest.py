@@ -70,7 +70,14 @@ class ddb:
                 data = await response.json()
                 ActivityInfo = data["data"]["activeMilestones"][0]["name"] + " " + \
                                data["data"]["activeMilestones"][0]["description"]
-                em = discord.Embed(title='Destiny Weekly Info', description=ActivityInfo, colour=0xFFD966)
+                activities = data["data"]["activeMilestones"]
+                modifiers = activities[0]["activities"]["modifiers"]
+                nightfallInfo = activities[0]["name"] + "\n" + \
+                                activities[0]["description"] + "\n\nModifiers:" + \
+                                modifiers[0]["name"] + ": " + modifiers["description"] + "\n" + \
+                                activities[1]["description"] + "\n\nModifiers:" + \
+                                modifiers[1]["name"] + ": " + modifiers["description"]
+                em = discord.Embed(title='Destiny Weekly Info', description=[activities][modifiers][nightfallInfo], colour=0xFFD966)
                 await self.bot.say(embed=em)
 
     async def print_notes(self):
