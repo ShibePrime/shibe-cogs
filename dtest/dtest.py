@@ -28,7 +28,7 @@ payload = {"query":"query GetMilestones($types: [MilestoneType]) {\n  activeMile
 
 class ddb:
 
-    """db.destinytracker.com"""
+    """db.destinytracker.com """
 
     def __init__(self, bot):
         self.bot = bot
