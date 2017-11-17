@@ -68,8 +68,6 @@ class ddb:
         async with ClientSession() as session:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
                 data = await response.json()
-                ActivityInfo = data["data"]["activeMilestones"][0]["name"] + " " + \
-                               data["data"]["activeMilestones"][0]["description"]
                 activities = data["data"]["activeMilestones"]
                 modifiers = activities[0]["activities"]["modifiers"]
                 nightfallInfo = activities[0]["name"] + "\n" + \
@@ -77,6 +75,7 @@ class ddb:
                                 modifiers[0]["name"] + ": " + modifiers["description"] + "\n" + \
                                 activities[1]["description"] + "\n\nModifiers:" + \
                                 modifiers[1]["name"] + ": " + modifiers["description"]
+                print(nightfallInfo)
                 em = discord.Embed(title='Destiny Weekly Info', description=nightfallInfo, colour=0xFFD966)
                 await self.bot.say(embed=em)
 
