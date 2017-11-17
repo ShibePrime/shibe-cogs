@@ -77,10 +77,9 @@ class ddb:
                                 "**"+modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*"
                 print(nightfallInfo)
                 print(imageurl)
-                em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966)
-                em.set_author(name='Destiny Weekly Info', icon_url="https://cdn.thetrackernetwork.com/destiny/common/destiny2_content/icons/4de13648c3bf8741e773d8e7e8a0164b.png",url="http://db.destinytracker.com/d2/en")
+                em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966,thumbnail="https://cdn.thetrackernetwork.com/destiny/common/destiny2_content/icons/4de13648c3bf8741e773d8e7e8a0164b.png")
+                em.set_author(name='Destiny Weekly Info', icon_url="https://i.imgur.com/8JDZzKM.png",url="http://db.destinytracker.com/d2/en")
                 await self.bot.say(embed=em)
-
 
 def setup(bot):
     bot.add_cog(ddb(bot))
