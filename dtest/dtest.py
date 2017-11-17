@@ -63,12 +63,4 @@ class ddb:
             self.bot.say("Error")
 
 
-def setup(bot):
-    if soup_available and pypandoc_available:
-        bot.add_cog(ddb(bot))
-    else:
-        if not soup_available:
-            error_text += "You need to run `pip install beautifulsoup4`\n"
-        if not pypandoc_available:
-            error_text += "You need to run `pip install pypandoc`\n"
-        raise RuntimeError(error_text)
+bot.add_cog(ddb(bot))
