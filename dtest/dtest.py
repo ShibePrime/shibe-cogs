@@ -44,7 +44,7 @@ class ddb:
     async def print_notes(self, url):
         try:
             async with aiohttp.post(url, json=payload, headers=headers) as response:
-			print response.text
+			print (response.text())
             soup = BeautifulSoup(await response.text(), "html.parser")
             html_notes = soup.find('div', {"class": "home-page"})
             text_notes = pypandoc.convert_text(html_notes, 'plain',
