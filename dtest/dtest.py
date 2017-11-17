@@ -39,7 +39,7 @@ class ddb:
 
         url = ''.join([base_url])
 
-        await self.print_patch_notes(url)
+        await self.print_notes(url)
 
     async def print_notes(self, url):
         try:
