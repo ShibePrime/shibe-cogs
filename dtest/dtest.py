@@ -68,7 +68,7 @@ class ddb:
         async with ClientSession() as session:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
                 data = await response.json()
-                activities = data["data"]["activeMilestones"][0]["availableQuests"]["activities"]
+                activities = data["data"]["activeMilestones"][0]["availableQuests"][0]["activities"]
                 modifiers = activities["modifiers"]
                 nightfallInfo = activities["activity"]["name"] + "\n" + \
                                 activities["activity"]["description"] + "\n\nModifiers:" + \
