@@ -18,7 +18,7 @@ try:  # check if pypandoc is installed
 except:
     pypandoc_available = False
 
-base_url = 'https://db-api.destinytracker.com/api/graphql'
+base_url = 'https://db-api.destinytracker.com/'
 headers = {":authority": "db-api.destinytracker.com",
            ":method": "POST",
            ":path": "/api/graphql",
@@ -55,13 +55,7 @@ class ddb:
             async with aiohttp.post(url, data=json.dumps(payload), headers=headers) as response:
                 results = await response.text()
                 print(results)
-                soup = BeautifulSoup(await response.text(), "html.parser")
-                html_notes = soup.find('div', {"class": "home-page"})
-                text_notes = pypandoc.convert_text(html_notes, 'plain',
-                                                   format='html',
-                                                   extra_args=['--wrap=none'])
-                # text_notes = text_notes.replace('&nbsp;', ' ')
-                em = discord.Embed(title='Destiny Weekly Info', description=text_notes, colour=0xFFD966)
+                em = discord.Embed(title='Destiny Weekly Info', description=results, colour=0xFFD966)
                 await self.bot.say(embed=em)
 
         except:
