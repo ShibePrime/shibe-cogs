@@ -59,8 +59,5 @@ class ddb:
                 await self.bot.say(embed=em)
 
         except:
-            await
-            self.bot.say("Error")
-
-
+            await self.bot.say("Error")
 bot.add_cog(ddb(bot))
