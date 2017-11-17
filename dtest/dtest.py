@@ -70,15 +70,14 @@ class ddb:
                 data = await response.json()
                 activities = data["data"]["activeMilestones"][0]["availableQuests"][0]["activities"]
                 modifiers = activities["modifiers"]
-                imageurl = data["data"]["activeMilestones"][0]["availableQuests"][0]["iconUrl"][0]
+                imageurl = data["data"]["activeMilestones"][0]["availableQuests"][0]["iconUrl"]
                 nightfallInfo = "__**" +activities["activity"]["name"] + "**__\n" + \
                                 activities["activity"]["description"] + "\n\n***Modifiers***\n" + \
                                 "**"+modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
                                 "**"+modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*"
-                print(imageurl)
                 print(nightfallInfo)
-                em = discord.Embed(title='Destiny Weekly Info', description=nightfallInfo, colour=0xFFD966)
-                em.set_author(name='@', icon_url=imageurl)
+                em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966)
+                em.set_author(name='Destiny Weekly Info', icon_url=imageurl)
                 await self.bot.say(embed=em)
 
 
