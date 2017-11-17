@@ -3,12 +3,12 @@ import discord
 import random
 from discord.ext import commands
 from cogs.utils import checks
-from cogs.utils.chat_formatting import box,  pagify, escape_mass_mentions
+from cogs.utils.chat_formatting import box, pagify, escape_mass_mentions
 from random import choice, randint
 import xkcd
 
-
 __author__ = "shibe "
+
 
 class Shibe:
     """ShibeBot's Commands"""
@@ -17,8 +17,7 @@ class Shibe:
         self.bot = bot
         self.base = 'data/doge/'
 
-
-# --Start Much E-sports Image embeds , Images go in /data/images/
+    # --Start Much E-sports Image embeds , Images go in /data/images/
     @commands.command(pass_context=True)
     async def yoshi(self, context):
         """YOSHI"""
@@ -129,7 +128,8 @@ class Shibe:
     async def jack(self, context):
         """jack"""
         await self.bot.send_file(context.message.channel, '{}images/jack.png'.format(self.base))
-# --END Image embeds
+
+    # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
     async def suh(self, ctx):
@@ -146,7 +146,9 @@ class Shibe:
     @commands.command()
     async def ark(self):
         """Get's link for Mandrew ARK"""
-        em = discord.Embed(title='Click To Connect to Mandrew ARK', description='steam://connect/71.93.28.250:27015 \n Whisper a Doge Master for the password \n\n NOTE: If it\'s your first time, You\'ll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client in between reconnects', colour=0xDEADBF)
+        em = discord.Embed(title='Click To Connect to Mandrew ARK',
+                           description='steam://connect/71.93.28.250:27015 \n Whisper a Doge Master for the password \n\n NOTE: If it\'s your first time, You\'ll have to reconnect multiple times until all the mods are loaded. You can track workshop content download progress in your steam client in between reconnects',
+                           colour=0xDEADBF)
         em.set_author(name='ShibeBot', icon_url='http://i.imgur.com/mYdLixs.png')
         await self.bot.say(embed=em)
 
@@ -164,7 +166,7 @@ class Shibe:
         pecker = random.choice(lines)
         await self.bot.say(pecker)
 
-# --xkcd by ultimatePancake
+    # --xkcd by ultimatePancake
     @commands.group(name="xkcd", pass_context=True)
     async def xkcd(self, ctx):
         """Displays latest xkcd comic"""
@@ -180,6 +182,8 @@ class Shibe:
     async def _number(self, ctx, number: int):
         """Displays specified xkcd comic."""
         await self.bot.say(xkcd.getComic(number).getImageLink())
+
+
 # --
 
 
