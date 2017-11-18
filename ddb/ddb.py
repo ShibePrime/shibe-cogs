@@ -60,7 +60,7 @@ class ddb:
                                 activities["activity"]["description"] + "\n\n***Modifiers***\n" + \
                                 "**" + modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
                                 "**" + modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*\n\n" + \
-            print(variants)
+            print(modifiers)
             print(imageurl)
             em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966, )
             em.set_thumbnail(url=imageurl)
