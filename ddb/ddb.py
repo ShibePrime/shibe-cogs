@@ -53,7 +53,7 @@ class ddb:
                 data = await response.json()
                 activities = data["data"]["activeMilestones"][0]["availableQuests"][0]["activities"]
                 modifiers = activities["modifiers"]
-                challenges = activities["variants"][0]
+                challenges = activities["variants"]
                 imageurl = data["data"]["activeMilestones"][0]["availableQuests"][0]["iconUrl"].replace(
                     'destiny//common', 'destiny/common')
                 nightfallInfo = "__**" + activities["activity"]["name"] + "**__\n" + \
@@ -61,7 +61,7 @@ class ddb:
                                 "**" + modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
                                 "**" + modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*\n\n" \
                                 "**" + challenges["name"] + "**"
-                print(activities)
+                print(challenges)
                 print(imageurl)
                 em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966, )
                 em.set_thumbnail(url=imageurl)
