@@ -60,9 +60,8 @@ class ddb:
                                 activities["activity"]["description"] + "\n\n***Modifiers***\n" + \
                                 "**" + modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
                                 "**" + modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*\n\n" + \
-                                "\n\n***Challenges***\n" + \
-
             print(variants)
+            print(imageurl)
             em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966, )
             em.set_thumbnail(url=imageurl)
             em.set_author(name='Destiny Info', icon_url="https://i.imgur.com/8JDZzKM.png",
