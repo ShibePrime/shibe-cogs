@@ -43,7 +43,7 @@ class ddb:
     @_ddb.command(pass_context=True,name='nightfall')
     async def nightfall(self, ctx):
                 await self.get_nightfall()
-    async def get_nightfall(self, ctx):
+    async def get_nightfall(self):
         async with ClientSession() as session:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
                 data = await response.json()
