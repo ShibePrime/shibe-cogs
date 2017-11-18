@@ -28,7 +28,7 @@ class ddb:
         self.bot = bot
 
     @commands.group(name="ddb", pass_context=True)
-    async def ddb(self, ctx):
+    async def _ddb(self, ctx):
         """gets db.destinytracker.com infos"""
         if context.invoked_subcommand is None:
             prefix = context.prefix
