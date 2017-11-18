@@ -53,17 +53,17 @@ class ddb:
                 data = await response.json()
                 activities = data["data"]["activeMilestones"][0]["availableQuests"][0]["activities"]
                 modifiers = activities["modifiers"]
-                variants = activities["variants"][0]["challenges"]
+                variants = activities["variants"]
                 imageurl = data["data"]["activeMilestones"][0]["availableQuests"][0]["iconUrl"].replace(
                     'destiny//common', 'destiny/common')
                 nightfallInfo = "__**" + activities["activity"]["name"] + "**__\n" + \
                                 activities["activity"]["description"] + "\n\n***Modifiers***\n" + \
                                 "**" + modifiers[0]["name"] + ":**\n*" + modifiers[0]["description"] + "*\n" + \
                                 "**" + modifiers[1]["name"] + ":**\n*" + modifiers[1]["description"] + "*\n\n" + \
-                                "\n\n***Challenges***\n" + \
-                                "**" + variants[0]["name"] + ":**\n*" + variants[0]["description"] + "*\n" + \
-                                "**" + variants[1]["name"] + ":**\n*" + variants[1]["description"] + "*\n" + \
-                                "**" + variants[2]["name"] + ":**\n*" + variants[2]["description"] + "*\n" + \
+             #                   "\n\n***Challenges***\n" + \
+             #                   "**" + variants[0]["name"] + ":**\n*" + variants[0]["description"] + "*\n" + \
+             #                   "**" + variants[1]["name"] + ":**\n*" + variants[1]["description"] + "*\n" + \
+             #                   "**" + variants[2]["name"] + ":**\n*" + variants[2]["description"] + "*\n" + \
             print(variants)
             em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966, )
             em.set_thumbnail(url=imageurl)
