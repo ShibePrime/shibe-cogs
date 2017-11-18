@@ -30,8 +30,8 @@ class ddb:
     @commands.group(name="ddb", pass_context=True)
     async def _ddb(self, ctx):
         """gets db.destinytracker.com infos"""
-        if context.invoked_subcommand is None:
-            prefix = context.prefix
+        if ctx.invoked_subcommand is None:
+            prefix = ctx.prefix
             title = '**Check Destiny2 Stuff**\n'
             description = '**Commands**\n\n'
             description += '``{0}ddb nightfall``: Shows the current nightfall & modifiers .\n'
@@ -43,7 +43,7 @@ class ddb:
     @_ddb.command(pass_context=True,name='nightfall')
     async def nightfall(self, ctx):
                 await self.get_nightfall()
-    async def get_nightfall(self):
+    async def get_nightfall(self, ctx):
         async with ClientSession() as session:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
                 data = await response.json()
