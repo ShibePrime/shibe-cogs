@@ -32,12 +32,14 @@ class ddb:
         """gets db.destinytracker.com infos"""
         if ctx.invoked_subcommand is None:
             prefix = ctx.prefix
-            title = '**Check Destiny2 Stuff**\n'
-            description = '**Commands**\n\n'
-            description += '``{0}ddb nightfall``: Shows the current nightfall & modifiers .\n'
-
+            title = '**get db.destinytracker.com **\n'
+            description = '\n__**Commands**__\n\n'
+            description += '``{0}ddb nightfall`` gets the current nightfall information\n'
             em = discord.Embed(title=title, description=description.format(prefix), color=discord.Color.blue())
             em.set_footer(text='This cog was made by Shibe w/ Arrow help.')
+            em.set_author(name='Destiny Info', icon_url="https://i.imgur.com/8JDZzKM.png",
+                          url="http://db.destinytracker.com/d2/en")
+            em.set_thumbnail(url="https://i.imgur.com/TnBeVFO.png")
             await self.bot.say(embed=em)
 
     @_ddb.command(pass_context=True,name='nightfall')
@@ -59,7 +61,7 @@ class ddb:
                 print(imageurl)
                 em = discord.Embed(title='', description=nightfallInfo, colour=0xFFD966, )
                 em.set_thumbnail(url=imageurl)
-                em.set_author(name='Destiny Weekly Info', icon_url="https://i.imgur.com/8JDZzKM.png",
+                em.set_author(name='Destiny Info', icon_url="https://i.imgur.com/8JDZzKM.png",
                               url="http://db.destinytracker.com/d2/en")
                 await self.bot.say(embed=em)
 
