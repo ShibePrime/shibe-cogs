@@ -5,35 +5,6 @@ from .utils.chat_formatting import pagify
 from aiohttp import ClientSession
 import aiohttp
 
-try:  # check if BeautifulSoup4 is installed
-    from bs4 import BeautifulSoup
-
-    soup_available = True
-except:
-    soup_available = False
-
-try:  # check if pypandoc is installed
-    import pypandoc
-
-    pypandoc_available = True
-except:
-    pypandoc_available = False
-
-#:authority:db-api.destinytracker.com
-# :method:POST
-# :path:/api/graphql
-# :scheme:https
-# accept:/
-# accept-encoding:gzip, deflate, br
-# accept-language:en
-# cache-control:no-cache
-# content-length:1004
-# content-type:application/json
-# origin:http://db.destinytracker.com
-# pragma:no-cache
-# referer:http://db.destinytracker.com/d2/en
-# user-agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
-
 url = 'https://db-api.destinytracker.com/api/graphql'
 headers = {"authority": "db-api.destinytracker.com",
            "accept": "*/*",
@@ -50,8 +21,6 @@ payload = {
     "variables": {"types": ["Weekly", "Daily"]},
     "operationName": "GetMilestones"
 }
-
-
 
 class ddb:
     """db.destinytracker.com """
