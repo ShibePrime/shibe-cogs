@@ -34,8 +34,7 @@ class ddb:
         if ctx.invoked_subcommand is None:
             prefix = ctx.prefix
             title = '**.ddb gets info from db.destinytracker.com **'
-            description = '\n'
-            description += '__**Commands**__\n'
+            description = '__**Commands**__\n\n'
             description += '``{0}ddb nightfall`` gets the current nightfall information\n'
             em = discord.Embed(title=title, description=description.format(prefix), color=0xFFD966)
             em.set_footer(text='This cog was made by Shibe w/ help from Arrows pasta making class')
