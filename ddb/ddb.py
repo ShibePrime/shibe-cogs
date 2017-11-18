@@ -53,7 +53,7 @@ class ddb:
                 data = await response.json()
                 activities = data["data"]["activeMilestones"][0]["availableQuests"][0]["activities"]
                 modifiers = activities["modifiers"]
-                variants = activities["variants"]
+                variants = activities["variants"][0]["challenges"]
                 imageurl = data["data"]["activeMilestones"][0]["availableQuests"][0]["iconUrl"].replace(
                     'destiny//common', 'destiny/common')
                 nightfallInfo = "__**" + activities["activity"]["name"] + "**__\n" + \
