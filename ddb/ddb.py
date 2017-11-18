@@ -1,4 +1,5 @@
 import json
+
 import discord
 from aiohttp import ClientSession
 from discord.ext import commands
@@ -35,16 +36,17 @@ class ddb:
             title = '**get db.destinytracker.com **\n'
             description = '\n__**Commands**__\n\n'
             description += '``{0}ddb nightfall`` gets the current nightfall information\n'
-            em = discord.Embed(title=title, description=description.format(prefix), color=discord.Color.yellow())
+            em = discord.Embed(title=title, description=description.format(prefix), color=0xFFD966)
             em.set_footer(text='This cog was made by Shibe w/ Arrow help.')
             em.set_author(name='Destiny Info', icon_url="https://i.imgur.com/8JDZzKM.png",
                           url="http://db.destinytracker.com/d2/en")
             em.set_thumbnail(url="https://i.imgur.com/TnBeVFO.png")
             await self.bot.say(embed=em)
 
-    @_ddb.command(pass_context=True,name='nightfall')
+    @_ddb.command(pass_context=True, name='nightfall')
     async def nightfall(self, ctx):
-                await self.get_nightfall()
+        await self.get_nightfall()
+
     async def get_nightfall(self):
         async with ClientSession() as session:
             async with session.post(url, data=json.dumps(payload), headers=headers) as response:
