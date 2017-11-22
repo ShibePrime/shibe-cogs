@@ -129,6 +129,11 @@ class Shibe:
         """jack"""
         await self.bot.send_file(context.message.channel, '{}images/jack.png'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def pie2(self, context):
+        """pie2"""
+        await self.bot.send_file(context.message.channel, '{}images/pie2.png'.format(self.base))
+
     # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
