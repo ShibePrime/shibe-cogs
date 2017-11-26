@@ -134,6 +134,11 @@ class Shibe:
         """power level!?"""
         await self.bot.send_file(context.message.channel, '{}images/9000.gif'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def homer(self, context):
+        """abandon thread """
+        await self.bot.send_file(context.message.channel, '{}images/homer.gif'.format(self.base))
+
     # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
