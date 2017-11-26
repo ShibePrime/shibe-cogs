@@ -134,6 +134,11 @@ class Shibe:
         """pie2"""
         await self.bot.send_file(context.message.channel, '{}images/pie2.png'.format(self.base))
 
+    @commands.command(pass_context=True)
+    async def what9000(self, context):
+        """power level!?"""
+        await self.bot.send_file(context.message.channel, '{}images/9000.gif'.format(self.base))
+
     # --END Image embeds
 
     @commands.command(pass_context=True, no_pm=True, aliases=["suhdude"])
