@@ -39,3 +39,6 @@ To install the cogs, Follow the given steps:
 
 **InsertFutureCogsHere**
 > This is where I'll tell you what the next cog I make does.
+
+# Once Approved on Cogs.RED
+You should be able to .redp search (COG NAME) once I've been added to the list
