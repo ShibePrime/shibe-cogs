@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Shibe",
+    "INSTALL_MSG" : "Thanks for installing!",
+    "NAME" : "Spell Number",
+    "DESCRIPTION" : "Convert Numbers to words",
+    "REQUIREMENTS" : [num2words],
+    "TAGS": ["words", "spell", "random", "number"]
+}
