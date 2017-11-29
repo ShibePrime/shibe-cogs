@@ -11,8 +11,8 @@ class spellnum:
     @commands.command(pass_context=True)
     async def spellnum(self, context, num):
         """spellnum"""
-        numopt = num + ", 'sigfig',3, 'trz',false"
-        wordnum = num2words(numopt)
+        i = int(num)
+        wordnum = num2words(i)
         await self.bot.say(wordnum)
 
 
