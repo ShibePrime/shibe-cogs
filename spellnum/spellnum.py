@@ -1,20 +1,19 @@
-import json
-import discord
-from discord.ext import commands
 import num2words
+from discord.ext import commands
 
 
 class spellnum:
-    """Shows the word version of a number"""
+    """Shows the word of a number"""
 
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def spellnum(self, context):
+    async def spellnum(self, context, num):
         """spellnum"""
-        spellnum=num2words(context, to='cardinal')
-        await self.bot.say(spellnum)
+        wordnum = num2words(num)
+        await self.bot.say(wordnum)
+
 
 def setup(bot):
     bot.add_cog(spellnum(bot))
