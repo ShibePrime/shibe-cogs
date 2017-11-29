@@ -1,7 +1,7 @@
 import json
 import discord
 from discord.ext import commands
-from num2words import num2words
+import num2words
 
 
 class spellnum:
