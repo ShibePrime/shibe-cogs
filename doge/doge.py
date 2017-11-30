@@ -136,7 +136,7 @@ class Shibe:
 
     @commands.command(pass_context=True)
     async def homer(self, context):
-        """abandon thread """
+        """abandon thread"""
         await self.bot.send_file(context.message.channel, '{}images/homer.gif'.format(self.base))
 
     # --END Image embeds
