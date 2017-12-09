@@ -43,8 +43,8 @@ class ddb:
             em.set_thumbnail(url="https://i.imgur.com/TnBeVFO.png")
             await self.bot.say(embed=em)
 
-    @_ddb.command(pass_context=True, name='nightfall')
-    async def nightfall(aliases=["nf"],self, ctx):
+    @_ddb.command(pass_context=True, name='nightfall', aliases=["nf"])
+    async def nightfall(self, ctx):
         await self.get_nightfall()
 
     async def get_nightfall(self):
