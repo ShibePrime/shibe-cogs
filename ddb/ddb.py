@@ -44,7 +44,7 @@ class ddb:
             await self.bot.say(embed=em)
 
     @_ddb.command(pass_context=True, name='nightfall')
-    async def nightfall(self, ctx):
+    async def nightfall(aliases=["nf"],self, ctx):
         await self.get_nightfall()
 
     async def get_nightfall(self):
