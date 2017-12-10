@@ -162,7 +162,7 @@ class Shibe:
         em.set_author(name='ShibeBot', icon_url='http://i.imgur.com/mYdLixs.png')
         await self.bot.say(embed=em)
 
-    @commands.command()
+    @commands.command(name="piefact", aliases=["piefacts"])
     async def piefact(self):
         """100 Percent PieFacts"""
         lines = open('{}/piefacts/piefacts.txt'.format(self.base)).read().splitlines()
