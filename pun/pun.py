@@ -22,11 +22,8 @@ class pun:
         async with ClientSession() as session:
             async with session.get(url, headers=headers) as response:
                 onepun = await response.text()
-                imageurl = 'https://i.pinimg.com/originals/28/c1/1c/28c11c84de44f79450c8794849d02ab5.jpg'
                 pun = "__**" + onepun + "**__"
                 em = discord.Embed(title='', description=pun, colour=0xFFD966, )
-                em.set_thumbnail(url=imageurl)
-                em.set_author(name='ShibeBot The Pun Lord')
                 await self.bot.say(embed=em)
 
 
