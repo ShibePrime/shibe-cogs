@@ -21,8 +21,9 @@ class pun:
     async def get_pun(self):
         async with ClientSession() as session:
             async with session.get(url, headers=headers) as response:
-                onepun = await response.text()
-                pun = "__**" + onepun + "**__"
+                onepun = await response.json()
+                twopun = onepun["pun"]
+                pun = "**" + twopun + "**"
                 em = discord.Embed(title='', description=pun, colour=0xFFD966, )
                 await self.bot.say(embed=em)
 
