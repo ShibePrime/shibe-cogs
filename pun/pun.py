@@ -22,7 +22,7 @@ class pun:
         async with ClientSession() as session:
             async with session.post(url, headers=headers) as response:
                 data = await response.json()
-                pun = data["pun"]
+                pun = data[0]
                 imageurl = 'https://i.pinimg.com/originals/28/c1/1c/28c11c84de44f79450c8794849d02ab5.jpg'
                 pun = "__**" + pun[0] + "**__"
                 em = discord.Embed(title='', description=pun, colour=0xFFD966, )
