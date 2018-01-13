@@ -27,7 +27,7 @@ class pun:
                 em = discord.Embed(title='', description=pun, colour=0xFFD966, )
                 em.set_thumbnail(url=imageurl)
                 em.set_author(name='ShibeBot The Pun Lord')
-                print data
+                print onepun
                 await self.bot.say(embed=em)
 
 def setup(bot):
