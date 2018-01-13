@@ -1,8 +1,8 @@
 {
     "AUTHOR" : "Shibe",
-    "INSTALL_MSG" : "Thanks for installing!",
-    "NAME" : "ShibeCommands",
-    "DESCRIPTION" : "Just shibe things",
+    "INSTALL_MSG" : "A friend of mine tried to annoy me with bird puns, but I soon realized that toucan play at that game.",
+    "NAME" : "pun",
+    "DESCRIPTION" : "Random Pun",
     "REQUIREMENTS" : [],
-    "TAGS": ["facts", "pie", "random", "fun"]
+    "TAGS": ["random", "pun", "jokes", "fun"]
 }
