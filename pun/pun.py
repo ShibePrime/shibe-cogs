@@ -24,7 +24,7 @@ class pun:
                 onepun = await response.json()
                 twopun = onepun["pun"]
                 pun = "**" + twopun + "**"
-                em = discord.Embed(title='', description=pun, colour=0xFFD966, )
+                em = discord.Embed(title='', description=pun, colour=0x6FA8DC, )
                 await self.bot.say(embed=em)
 
 
