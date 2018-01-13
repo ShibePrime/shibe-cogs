@@ -28,8 +28,6 @@ class pun:
                 em.set_thumbnail(url=imageurl)
                 em.set_author(name='ShibeBot The Pun Lord')
                 await self.bot.say(embed=em)
-
-print onepun
-
+                
 def setup(bot):
     bot.add_cog(pun(bot))
