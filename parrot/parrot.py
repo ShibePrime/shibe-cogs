@@ -14,10 +14,10 @@ class parrot:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="pun", pass_context=True)
+    @commands.command(name="parrot", pass_context=True)
     async def parrot(self, ctx):
         await self.ask()
-        """Prints Random Puns"""
+        """ask question , regurgitate answer """
 
     async def ask(self):
         await self.bot.send_message(author,
