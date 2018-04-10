@@ -13,26 +13,26 @@ class parrot:
 
     def __init__(self, bot):
         self.bot = bot
-        author = ctx.message.author
 
-    @commands.command(author,name="parrot", pass_context=True)
+
+    @commands.command(name="parrot", pass_context=True)
     async def parrot(self, ctx):
         await self.ask()
         """ask question , regurgitate answer """
 
-    async def ask(self):
-
+    async def ask(self,ctx):
+        author = message.author
         await self.bot.send_message(author,
                                          "Please respond to this message "
                                          "with your message you want to say "
                                          "you do want? wait 30s")
-        title = await self.bot.wait_for_message(channel=channel,
+        reply = await self.bot.wait_for_message(channel=channel,
                                                 author=author, timeout=30)
         if title is None:
             await self.bot.send_message(author,
                                         "Okay, fine.")
         else:
-            self.bot.send_message(author, ":", title)
+            self.bot.send_message(author, ":", reply)
 
 def setup(bot):
     bot.add_cog(parrot(bot))
