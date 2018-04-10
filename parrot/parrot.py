@@ -13,6 +13,7 @@ class parrot:
 
     def __init__(self, bot):
         self.bot = bot
+        author = ctx.message.author
 
     @commands.command(author,name="parrot", pass_context=True)
     async def parrot(self, ctx):
@@ -20,8 +21,6 @@ class parrot:
         """ask question , regurgitate answer """
 
     async def ask(self):
-
-        author = message.author
 
         await self.bot.send_message(author,
                                          "Please respond to this message "
