@@ -33,4 +33,4 @@ class parrot:
             self.bot.send_message(author, ":", title)
 
 def setup(bot):
-    bot.add_cog(pun(bot))
+    bot.add_cog(parrot(bot))
