@@ -29,8 +29,7 @@ class parrot:
     async def contact_for_parrot(self, game: str, author, server=None):
 
         dm = await
-        self.bot.send_message(author,
-                              "Please respond to this message with the details of your raid. \nIf you do not want a details, wait 30s\nEx: Prestige Argos ; WoW Mythics ; LFR")
+        self.bot.send_message(author,"Please respond to this message with ""the details of your raid. " "If you do not want a details, wait 30s " "Ex: Prestige Argos ; WoW Mythics ; LFR")
         desc = await
         self.bot.wait_for_message(channel=dm.channel,
                                   author=author, timeout=30)
