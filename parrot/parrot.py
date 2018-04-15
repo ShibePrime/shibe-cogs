@@ -19,8 +19,8 @@ class parrot:
     async def parrot(self,ctx):
         """ask question , regurgitate answer """
         await self.bot.send_message(author=ctx.message.author,
-                                         "Please respond to this message "
-                                         "with your message you want to say "
+                                         "Please respond to this message ",
+                                         "with your message you want to say ",
                                          "wait 30s")
         reply = await self.bot.wait_for_message(channel=channel,
                                                 author=author, timeout=30)
