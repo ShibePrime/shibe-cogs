@@ -30,7 +30,7 @@ class parrot:
                                          "Please respond to this message\n "
                                          "with the details of your raid. If\n "
                                          "you do not want a details, wait 30s\n"
-                                         "`Ex: Prestige Argos ; WoW Mythics ; LFR`")
+                                         "\\`Ex: Prestige Argos ; WoW Mythics ; LFR\\`")
         desc = await self.bot.wait_for_message(channel=dm.channel,
                                                 author=author, timeout=30)
 
@@ -39,8 +39,8 @@ class parrot:
                                         "Okay, this one won't have a description.")
 
         dm = await self.bot.send_message(author,
-                                         "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE`\n "
-                                         "`Ex: 12/25/17 8:00pm PST`")
+                                         "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE\\`\n "
+                                         "\\`Ex: 12/25/17 8:00pm PST\\`")
         time = await self.bot.wait_for_message(channel=dm.channel,
                                                   author=author, timeout=120)
         if time is None:
