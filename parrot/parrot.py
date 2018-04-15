@@ -18,10 +18,8 @@ class parrot:
     @commands.command(name="parrot", pass_context=True)
     async def parrot(self,ctx):
         """ask question , regurgitate answer """
-        await self.bot.send_message(author=ctx.message.author,
-                                         "Please respond to this message ",
-                                         "with your message you want to say ",
-                                         "wait 30s")
+        await self.bot.send_message(author=ctx.message.author,"Please respond to this message")
+
         reply = await self.bot.wait_for_message(channel=channel,
                                                 author=author, timeout=30)
         if reply is None:
