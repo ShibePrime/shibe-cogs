@@ -17,7 +17,7 @@ class parrot:
 
     @commands.command(name="parrot", pass_context=True)
     async def parrot(self, ctx, game: str):
-        """Interactive prompt for making a raid, Do something like `.parrot WoW` or `.parrot destiny` to get started """
+        """Interactive prompt for making a raid, Do something like .parrot WoW or .parrot destiny to get started """
         author = ctx.message.author
         server = ctx.message.server
 
@@ -43,6 +43,7 @@ class parrot:
         dm = await self.bot.send_message(author,
                                   "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE` "
                                   "Ex: `12/25/17 8:00pm PST`")
+
         time = await self.bot.wait_for_message(channel=dm.channel,
                                   author=author, timeout=30)
         if time is None:
@@ -50,7 +51,7 @@ class parrot:
                                   "I can't wait forever, "
                                   "try again when ready")
         else:
-            await self.bot.say(game, desc, time, server)
+            await self.bot.send_message(author,game, desc, time)
             await self.bot.send_message(author, "Your raid was created")
 
 
