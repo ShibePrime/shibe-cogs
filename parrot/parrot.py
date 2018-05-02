@@ -88,7 +88,7 @@ class parrot:
             await self.bot.send_message(author, day.content)
             await self.bot.send_message(author, jointime + " " + zone.content)
             await self.bot.send_message(author, game + " " + desc.content + " " + jointime + " " + zone.content)
-            await self.bot.send_message(author, ".raid create"  "\""game + "|" + desc.content + "\" " + jointime + " " + zone.content)
+            await self.bot.send_message(author, ".raid create" + "\"" + game + "|" + desc.content + "\" " + jointime + " " + zone.content)
             await self.bot.send_message(author, embed=e)
 
 
