@@ -14,8 +14,7 @@ class welcome:
     @checks.is_owner()
     async def welcome(self, ctx, user_id: str):
         """welcome a new DOGE using ShibBot with hardcoded welcome message in a DM"""
-        username = message.server.members.get("name", user_id).id;
-        user = await self.bot.get_user_info(username)
+        user = message.server.members.get("name", user_id).id;
         try:
             e = discord.Embed(colour=discord.Colour.red())
             e.title = "You've recieved a message from a DogeMod!"
