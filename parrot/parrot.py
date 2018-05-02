@@ -51,7 +51,8 @@ class parrot:
                                   "I can't wait forever, "
                                   "try again when ready")
         else:
-            await self.bot.send_message(author,game desc time)
+            msg = game + desc + time
+            await self.bot.send_message(author,msg)
             await self.bot.send_message(author, "Your raid was created")
 
 
