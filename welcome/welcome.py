@@ -12,7 +12,7 @@ class welcome:
     @commands.command(pass_context=True)
     @checks.is_owner()
     async def welcome(self, ctx, user_id: str):
-        """Dm users."""
+        """Sends a user the welcome message after a manual promote to DOGE"""
         user = await self.bot.get_user_info(user_id)
         try:
             e = discord.Embed(colour=discord.Colour.red())
