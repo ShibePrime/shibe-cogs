@@ -73,7 +73,7 @@ class parrot:
                                   "I can't wait forever, "
                                   "try again when ready")
         else:
-            joinzone = " ".join((time.content + zone.content))
+            joinzone = time.content + " " + zone.content))
             jointime = " ".join((day.content, joinzone))
             e = discord.Embed(colour=discord.Colour.red())
             e.title = "You've created a raid!"
