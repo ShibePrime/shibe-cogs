@@ -82,11 +82,12 @@ class parrot:
             e.set_thumbnail(url="https://cdn.discordapp.com/avatars/275738057200631819/0a79e4457eb45374f7bcc9d5b8a981b3.png")
             e.add_field(name="Note:", value="Go do \".raid list\" in a relevant game channel to see the raids available , tell your friends to \".raid join #\"(the number next to your raid)", inline=False)
             await self.bot.send_message(author, game)
-            await self.bot.send_message(author, desc)
+            await self.bot.send_message(author, desc.content)
             await self.bot.send_message(author, time.content)
             await self.bot.send_message(author, zone.content)
             await self.bot.send_message(author, day.content)
             await self.bot.send_message(author, jointime + " " + zone.content)
+            await self.bot.send_message(author, ".raid create"  "\""game + "|" + desc.content + "\" " + jointime + " " + zone.content)
             await self.bot.send_message(author, embed=e)
 
 
