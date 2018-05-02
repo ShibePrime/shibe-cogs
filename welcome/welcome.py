@@ -13,7 +13,7 @@ class welcome:
     @checks.is_owner()
     async def welcome(self, ctx, user_id: str):
         """Sends a user the welcome message after a manual promote to DOGE"""
-        user = await self.bot.get_user_info(user_id)
+        user = await self.bot.get_user_info(id)
         try:
             e = discord.Embed(colour=discord.Colour.red())
             e.title = "You've recieved a message from a DogeMod!"
