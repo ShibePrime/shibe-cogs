@@ -15,6 +15,7 @@ class parrot:
         self.bot = bot
 
 
+
     @commands.command(name="parrot", pass_context=True)
     async def parrot(self, ctx, game: str):
         """Interactive prompt for making a raid"""
@@ -28,8 +29,8 @@ class parrot:
 
         dm = await self.bot.send_message(author,
                                          "Please respond to this message"
-                                         "with the details of your raid. If "
-                                         "you do not want a details, wait 30s"
+                                         "with the details of your raid.\n If "
+                                         "you do not want a details, wait 30s\n"
                                          "Ex: Prestige Argos ; WoW Mythics ; LFR")
         desc = await self.bot.wait_for_message(channel=dm.channel,
                                                 author=author, timeout=30)
@@ -37,9 +38,9 @@ class parrot:
         if desc is None:
             await self.bot.send_message(author,
                                         "Okay, this one won't have a description.")
-
-        dm = await self.bot.send_message(author,
-                                         "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE "
+        else:
+            dm = await self.bot.send_message(author,
+                                         "what time? Follow the example format. MM/DD/YY Hr:MinAM/PM TIMEZONE "
                                          "Ex: 12/25/17 8:00pm PST")
         time = await self.bot.wait_for_message(channel=dm.channel,
                                                   author=author, timeout=120)
