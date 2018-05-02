@@ -22,9 +22,9 @@ class welcome:
             e.set_thumbnail(url="https://cdn.discordapp.com/avatars/275738057200631819/0a79e4457eb45374f7bcc9d5b8a981b3.png")
             await self.bot.send_message(user, embed=e)
         except:
-            await self.bot.say(':x: Failed to send message to user_id `{}`.'.format(user_id))
+            await self.bot.say(':x: Failed to send message to user_id `{}`.'.format(user))
         else:
-            await self.bot.say('Succesfully sent message to {}'.format(user_id))
+            await self.bot.say('Succesfully sent message to {}'.format(user))
 
 def setup(bot):
     bot.remove_command('welcome')
