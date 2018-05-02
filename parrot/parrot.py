@@ -18,7 +18,8 @@ class parrot:
 
     @commands.command(name="parrot", pass_context=True)
     async def parrot(self, ctx, game: str):
-        """Interactive prompt for making a raid"""
+        """Interactive prompt for making a raid
+        Do something like `.parrot WoW` or `.parrot destiny` to get started """
         author = ctx.message.author
         server = ctx.message.server
 
@@ -26,19 +27,6 @@ class parrot:
         await self.contact_for_parrot(game, author, server)
 
     async def contact_for_parrot(self, game: str, author, server=None):
-
-        dm = await self.bot.send_message(author,
-                                         "Please respond to this message"
-                                         "with the game your event is for.\r\n "
-                                         "This is required\r\n"
-                                         "Ex: `WoW` ; `Destiny` ; `Hello Kitty Island Adventure`")
-        game = await self.bot.wait_for_message(channel=dm.channel,
-                                                author=author, timeout=30)
-
-        if game is None:
-            await self.bot.send_message(author,
-                                        "Okay, this one won't have a description.")
-        else:
 
             dm = await self.bot.send_message(author,
                                              "Please respond to this message"
