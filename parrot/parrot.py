@@ -18,8 +18,7 @@ class parrot:
 
     @commands.command(name="parrot", pass_context=True)
     async def parrot(self, ctx, game: str):
-        """Interactive prompt for making a raid
-        Do something like `.parrot WoW` or `.parrot destiny` to get started """
+        """Interactive prompt for making a raid, Do something like `.parrot WoW` or `.parrot destiny` to get started """
         author = ctx.message.author
         server = ctx.message.server
 
