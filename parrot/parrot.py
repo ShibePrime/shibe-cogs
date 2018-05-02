@@ -40,12 +40,10 @@ class parrot:
         await self.bot.send_message(author,
                               "Okay, this one won't have a description.")
     else:
-        dm = await
-        self.bot.send_message(author,
+        dm = await self.bot.send_message(author,
                               "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE` "
                               "Ex: `12/25/17 8:00pm PST`")
-    time = await
-    self.bot.wait_for_message(channel=dm.channel,
+    time = await self.bot.wait_for_message(channel=dm.channel,
                               author=author, timeout=30)
     if time is None:
         return await self.bot.send_message(author,
