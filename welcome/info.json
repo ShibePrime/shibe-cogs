@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Shibe",
+    "INSTALL_MSG" : "Thanks for installing!",
+    "NAME" : "Welcome Message",
+    "DESCRIPTION" : "Hardcoded DM Welcome message for ThunderDoges.com ",
+    "REQUIREMENTS" : [],
+    "TAGS": ["notify", "welcome", "thunderdoge", "dm"]
+}
