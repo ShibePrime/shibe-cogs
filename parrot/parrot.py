@@ -29,21 +29,34 @@ class parrot:
 
         dm = await self.bot.send_message(author,
                                          "Please respond to this message"
-                                         "with the details of your raid.\n If "
-                                         "you do not want a details, wait 30s\n"
-                                         "Ex: Prestige Argos ; WoW Mythics ; LFR")
-        desc = await self.bot.wait_for_message(channel=dm.channel,
+                                         "with the game your event is for.\r\n "
+                                         "This is required\r\n"
+                                         "Ex: `WoW` ; `Destiny` ; `Hello Kitty Island Adventure`")
+        game = await self.bot.wait_for_message(channel=dm.channel,
                                                 author=author, timeout=30)
+
+        if game is None:
+            await self.bot.send_message(author,
+                                        "Okay, this one won't have a description.")
+        else:
+
+            dm = await self.bot.send_message(author,
+                                             "Please respond to this message"
+                                             "with the details of your raid.\r\n If "
+                                             "you do not want a details, wait 30s\r\n"
+                                             "Ex: `Prestige Argos` ; `WoW Mythics` ; `LFR`")
+            desc = await self.bot.wait_for_message(channel=dm.channel,
+                                                    author=author, timeout=30)
 
         if desc is None:
             await self.bot.send_message(author,
                                         "Okay, this one won't have a description.")
         else:
             dm = await self.bot.send_message(author,
-                                         "what time? Follow the example format. MM/DD/YY Hr:MinAM/PM TIMEZONE "
-                                         "Ex: 12/25/17 8:00pm PST")
+                                         "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE` "
+                                         "Ex: `12/25/17 8:00pm PST`")
         time = await self.bot.wait_for_message(channel=dm.channel,
-                                                  author=author, timeout=120)
+                                                  author=author, timeout=30)
         if time is None:
             return await self.bot.send_message(author,
                                                "I can't wait forever, "
