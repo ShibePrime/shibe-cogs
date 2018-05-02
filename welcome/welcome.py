@@ -28,5 +28,5 @@ class welcome:
 
 def setup(bot):
     bot.remove_command('welcome')
-    n = Pm(bot)
+    n = welcome(bot)
     bot.add_cog(n)
