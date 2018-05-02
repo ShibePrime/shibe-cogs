@@ -41,8 +41,19 @@ class parrot:
                                   "Okay, this one won't have a description.")
 
         dm = await self.bot.send_message(author,
-                                  "what time? Follow the example format. `MM/DD/YY Hr:MinAM/PM TIMEZONE` "
-                                  "Ex: `12/25/17 8:00pm PST`")
+                                  "what day? Follow the example format. `MM/DD/YY` "
+                                  "Ex: `12/25/17`")
+
+        day = await self.bot.wait_for_message(channel=dm.channel,
+                                  author=author, timeout=30)
+        if day is None:
+            return await self.bot.send_message(author,
+                                  "I can't wait forever, "
+                                  "try again when ready")
+
+        dm = await self.bot.send_message(author,
+                                  "what time? Follow the example format. `H:MA` "
+                                  "Ex: `8:00PM` or `11:00AM`")
 
         time = await self.bot.wait_for_message(channel=dm.channel,
                                   author=author, timeout=30)
@@ -50,14 +61,28 @@ class parrot:
             return await self.bot.send_message(author,
                                   "I can't wait forever, "
                                   "try again when ready")
+
+        dm = await self.bot.send_message(author,
+                                  "what time zone?"
+                                  "Ex: `PST` , `EST` etc. ")
+
+        zone = await self.bot.wait_for_message(channel=dm.channel,
+                                  author=author, timeout=30)
+        if zone is None:
+            return await self.bot.send_message(author,
+                                  "I can't wait forever, "
+                                  "try again when ready")
         else:
             e = discord.Embed(colour=discord.Colour.red())
             e.title = "You've created a raid!"
             e.add_field(name="Game:", value=game, inline=False)
-            e.add_field(name="Time:", value=time.content, inline=False)
+            e.add_field(name="Time:", value= day.content + time.content + zone.content, inline=False)
             e.add_field(name="Description:", value=desc.content, inline=False)
+            e.add_field(name="", value="Go do .raid list in a relevant game channel to see the raids available , tell your friends to .raid join #(the number next to your raid)", inline=False)
             e.set_thumbnail(url="https://cdn.discordapp.com/avatars/275738057200631819/0a79e4457eb45374f7bcc9d5b8a981b3.png")
             await self.bot.send_message(author, embed=e)
+            createraid = ".raid create" + (game + "|" + desc.content + day.content + "/n" time.content+zone.content)
+            await self.bot.process_commands(createraid)
 
 
 def setup(bot):
