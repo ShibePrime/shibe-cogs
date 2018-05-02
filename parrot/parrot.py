@@ -73,11 +73,11 @@ class parrot:
                                   "I can't wait forever, "
                                   "try again when ready")
         else:
+            joinzone = time.content + zone.content
+            jointime = " ".join((day.content, joinzone.content))
             e = discord.Embed(colour=discord.Colour.red())
             e.title = "You've created a raid!"
             e.add_field(name="Game:", value=game, inline=False)
-            joinzone = time.content + zone.content
-            jointime = " ".join((day.content, joinzone))
             e.add_field(name="Time:", value=jointime , inline=False)
             e.add_field(name="Description:", value=desc.content, inline=False)
             e.add_field(name="", value="Go do .raid list in a relevant game channel to see the raids available , tell your friends to .raid join #(the number next to your raid)", inline=False)
