@@ -11,7 +11,7 @@ class welcome:
 
     @commands.command(pass_context=True)
     @checks.is_owner()
-    async def welcome(self, ctx, user_id: str, *):
+    async def welcome(self, ctx, user_id: str):
         """Dm users."""
         user = await self.bot.get_user_info(user_id)
         try:
