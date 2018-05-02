@@ -51,9 +51,13 @@ class parrot:
                                   "I can't wait forever, "
                                   "try again when ready")
         else:
-            msg = game + desc + time
-            await self.bot.send_message(author,msg)
-            await self.bot.send_message(author, "Your raid was created")
+            e = discord.Embed(colour=discord.Colour.red())
+            e.title = "You've created a raid!"
+            e.add_field(name="Game:", value=game, inline=False)
+            e.add_field(name="Time:", value=time, inline=False)
+            e.add_field(name="Description:", value=desc, inline=False)
+            e.set_thumbnail(url="https://cdn.discordapp.com/avatars/275738057200631819/0a79e4457eb45374f7bcc9d5b8a981b3.png")
+            await self.bot.send_message(author, embed=e)
 
 
 def setup(bot):
