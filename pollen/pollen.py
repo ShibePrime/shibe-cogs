@@ -24,7 +24,7 @@ class Pollen:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="wowtoken", pass_context=True)
+    @commands.command(name="pollen", pass_context=True)
     async def pollen(self, ctx):
         """how many pollen? """
 
