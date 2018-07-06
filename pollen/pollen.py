@@ -13,10 +13,11 @@ class pollen:
 
     @commands.command(name="pollen", pass_context=True)
     async def pollen(self, ctx):
-        client = pypollencom.Client(98908, websession)
-        data = Client.allergens.current()
-        em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
-        await self.bot.say(embed=em)
+        async with ClientSession() as websession:
+            Client = pypollencom.Client(98908, websession)
+            data = Client.allergens.current()
+            em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
+            a   wait self.bot.say(embed=em)
 
 def setup(bot):
     bot.add_cog(pollen(bot))
