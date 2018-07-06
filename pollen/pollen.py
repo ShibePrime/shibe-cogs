@@ -1,7 +1,5 @@
-import json
 import discord
 import pypollencom
-import asyncio
 from discord.ext import commands
 
 class pollen:
