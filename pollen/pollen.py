@@ -24,6 +24,6 @@ class pollen:
                 pollen = response.json()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
                 await self.bot.say(pollen)
-                print (pollen)
+                print (json.dump(pollen))
 def setup(bot):
     bot.add_cog(pollen(bot))
