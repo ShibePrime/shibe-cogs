@@ -17,8 +17,7 @@ class pollen:
 
     async def get_pollen(self):
         async with ClientSession() as websession:
-            async with session.get(url, headers=headers) as response:
-                await run(websession)
+            await run(websession)
 
     async def run(websession):
         client = pypollencom.Client(98908, websession)
