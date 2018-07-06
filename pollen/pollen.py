@@ -4,6 +4,7 @@ import asyncio
 from aiohttp import ClientSession
 from discord.ext import commands
 from pypollencom import Client
+from pypollencom.errors import PollenComError
 
 class pollen:
     """get pollen"""
@@ -12,18 +13,54 @@ class pollen:
         self.bot = bot
 
     @commands.command(name="pollen", pass_context=True)
-    async def main(self) -> None:
-        """Create the aiohttp session and run the example."""
-        async with ClientSession() as websession:
-            await self.run(websession)
+    async def allergens(client: Client) -> None:
+        """Output allergen-related information."""
+        print('CURRENT ALLERGENS')
+        print(await client.allergens.current())
 
-    async def run(self, websession):
-            client = self.pypollencom.Client(98908, websession)
-            data = client.allergens.current()
-#            em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
-#            await self.bot.say(embed=em)
-            await self.bot.say(data)
-            return data
+        print()
+        print('EXTENDED ALLERGENS')
+        print(await client.allergens.extended())
+
+        print()
+        print('HISTORIC ALLERGENS')
+        print(await client.allergens.historic())
+
+        print()
+        print('ALLERGY OUTLOOK')
+        print(await client.allergens.outlook())
+
+        async def disease(client: Client) -> None:
+            """Output disease-related information."""
+            print('EXTENDED DISEASE INFO')
+            print(await client.disease.extended())
+
+            async def main() -> None:
+                """Create the aiohttp session and run the example."""
+                async with ClientSession() as websession:
+                    await
+                    run(websession)
+
+            async def run(websession):
+                """Run."""
+                try:
+                    # Create a client:
+                    client = Client('80238', websession)
+                    print('Client instantiated for ZIP "{0}"'.format(client.zip_code))
+
+                    # Work with allergen data:
+                    print()
+                    await
+                    allergens(client)
+
+                    # Work with disease data:
+                    print()
+                    await
+                    disease(client)
+                except PollenComError as err:
+                    print(err)
+
+    asyncio.get_event_loop().run_until_complete(main())
 
 def setup(bot):
     bot.add_cog(pollen(bot))
