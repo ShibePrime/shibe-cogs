@@ -1,6 +1,10 @@
+import json
 import discord
 import pypollencom
+import asyncio
+from aiohttp import ClientSession
 from discord.ext import commands
+from pypollencom import Client
 
 class pollen:
     """get pollen"""
@@ -15,7 +19,7 @@ class pollen:
 
     async def get_pollen(self):
         async with ClientSession() as websession:
-            await run(websession)
+            await self.run(websession)
 
     async def run(websession):
         client = pypollencom.Client(98908, websession)
