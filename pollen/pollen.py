@@ -39,7 +39,7 @@ class pollen:
             async with aiohttp.get(url, headers=headers) as response:
                 soup = BeautifulSoup(await response.text(), "html.parser")
 
-            html_notes = soup.find('div', {"class": "forecast-charts" , "id": "forecast-chart"})
+            html_notes = soup.find('div', {"class": "row text-center"})
             text_notes = pypandoc.convert_text(html_notes, 'plain',
                                                format='html',
                                                extra_args=['--wrap=none'])
