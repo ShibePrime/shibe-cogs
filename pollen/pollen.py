@@ -21,7 +21,7 @@ class pollen:
     async def get_pollen(self):
         async with ClientSession() as session:
             async with session.get(url, headers=headers) as response:
-                pollen = await response.json()
+                pollen = await response()
                 em = discord.Embed(title='', description=pollen, colour=0x6FA8DC, )
                 await self.bot.say(embed=em)
 def setup(bot):
