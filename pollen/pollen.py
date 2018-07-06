@@ -35,27 +35,27 @@ class pollen:
             print('EXTENDED DISEASE INFO')
             print(await client.disease.extended())
 
-            async def main() -> None:
-                """Create the aiohttp session and run the example."""
-                async with ClientSession() as websession:
-                    await run(websession)
+        async def main() -> None:
+            """Create the aiohttp session and run the example."""
+            async with ClientSession() as websession:
+                await run(websession)
 
-            async def run(websession):
-                """Run."""
-                try:
-                    # Create a client:
-                    client = Client('80238', websession)
-                    print('Client instantiated for ZIP "{0}"'.format(client.zip_code))
+        async def run(websession):
+            """Run."""
+            try:
+                # Create a client:
+                client = Client('80238', websession)
+                print('Client instantiated for ZIP "{0}"'.format(client.zip_code))
 
-                    # Work with allergen data:
-                    print()
-                    await allergens(client)
+                # Work with allergen data:
+                print()
+                await allergens(client)
 
-                    # Work with disease data:
-                    print()
-                    await disease(client)
-                except PollenComError as err:
-                    print(err)
+                # Work with disease data:
+                print()
+                await disease(client)
+            except PollenComError as err:
+                print(err)
 
     asyncio.get_event_loop().run_until_complete(main())
 
