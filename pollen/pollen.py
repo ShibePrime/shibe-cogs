@@ -12,7 +12,6 @@ class pollen:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="pollen", pass_context=True)
     async def allergens(client: Client) -> None:
         """Output allergen-related information."""
         print('CURRENT ALLERGENS')
@@ -35,6 +34,7 @@ class pollen:
             print('EXTENDED DISEASE INFO')
             print(await client.disease.extended())
 
+    @commands.command(name="pollen", pass_context=True)
         async def main() -> None:
             """Create the aiohttp session and run the example."""
             async with ClientSession() as websession:
