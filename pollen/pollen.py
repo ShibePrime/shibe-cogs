@@ -24,6 +24,8 @@ class pollen:
 #            await self.bot.say(embed=em)
             await self.bot.say(data)
             return data
+    
+    asyncio.get_event_loop().run_until_complete(main())
 
 def setup(bot):
     bot.add_cog(pollen(bot))
