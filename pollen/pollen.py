@@ -16,14 +16,14 @@ class pollen:
     @commands.command(name="pollen", pass_context=True)
     async def pollen(self, ctx):
         await self.get_pollen()
-        """Prints pollen zip"""
+        """Prints pollen"""
 
     async def get_pollen(self):
         async with ClientSession() as session:
             async with session.get(url, headers=headers) as response:
                 pollen = await response.json()
-                pollen1 = pollen["Type"]["Location"]
-                em = discord.Embed(title='', description=pollen1, colour=0x6FA8DC, )
-                await self.bot.say(embed=em)
+#                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
+                await self.bot.say(pollen)
+                return pollen
 def setup(bot):
     bot.add_cog(pollen(bot))
