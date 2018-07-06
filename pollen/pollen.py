@@ -11,7 +11,7 @@ class pollen:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="pollen", pass_context=True)2
+    @commands.command(name="pollen", pass_context=True)
     async def main() -> None:
         """Create the aiohttp session and run the example."""
         async with ClientSession() as websession:
