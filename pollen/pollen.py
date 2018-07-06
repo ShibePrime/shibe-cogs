@@ -18,7 +18,7 @@ class pollen:
             await self.run(websession)
 
     async def run(self, websession):
-            client = pypollencom.Client(98908, websession)
+            client = self.pypollencom.Client(98908, websession)
             data = client.allergens.current()
 #            em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
 #            await self.bot.say(embed=em)
