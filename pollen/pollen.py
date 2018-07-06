@@ -24,5 +24,14 @@ class pollen:
             await self.bot.say(embed=em)
 
 
+<<<<<<< HEAD
+=======
+    async def get_pollen(self):
+        async with ClientSession() as session:
+            async with session.get(url, headers=headers) as response:
+                em = discord.Embed(title='', description=pollen, colour=0x6FA8DC, )
+                await self.bot.say(embed=em)
+
+>>>>>>> parent of 4f1202c... oh
 def setup(bot):
     bot.add_cog(pollen(bot))
