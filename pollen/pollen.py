@@ -11,16 +11,18 @@ class pollen:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="pollen", pass_context=True)
-    async def pollen(self, ctx):
+    @commands.command(name="pollen", pass_context=True)2
+    async def main() -> None:
+        """Create the aiohttp session and run the example."""
         async with ClientSession() as websession:
-            await run(websession)
+            await
+            run(websession)
 
     asyn def run(websession):
-            Client = pypollencom.Client(98908, websession)
-            data = Client.allergens.current()
+            client = pypollencom.Client(98908, websession)
+            data = client.allergens.current()
             em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
-            a   wait self.bot.say(embed=em)
+            await self.bot.say(embed=em)
 
 def setup(bot):
     bot.add_cog(pollen(bot))
