@@ -19,13 +19,11 @@ class pollen:
 
     async def run(self, websession):
             client = pypollencom.Client(98908, websession)
-            data = client.allergens.current()
+            data = await self.client.allergens.current()
 #            em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
 #            await self.bot.say(embed=em)
             await self.bot.say(data)
             return data
-    
-    asyncio.get_event_loop().run_until_complete(main())
 
 def setup(bot):
     bot.add_cog(pollen(bot))
