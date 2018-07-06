@@ -15,8 +15,8 @@ try:  # check if pypandoc is installed
 except:
     pypandoc_available = False
 
-base_url = 'https://www.pollen.com/forecast/current/pollen/98908'
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'}
+base_url = 'https://www.pollen.com/api/forecast/current/pollen/98908'
+headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com/forecast/current/pollen/98908', 'Accept': 'application/json, text/plain, */*'}
 
 
 class pollen:
