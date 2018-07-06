@@ -1,4 +1,3 @@
-import json
 import discord
 import pypollencom
 import asyncio
