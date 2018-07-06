@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Shibe",
+    "INSTALL_MSG" : "Thanks for installing!",
+    "NAME" : "Pollen Message",
+    "DESCRIPTION" : "gets pollen.com",
+    "REQUIREMENTS" : [],
+    "TAGS": ["weather", "pollen", "thunderdoge"]
+}

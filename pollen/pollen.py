@@ -1,3 +1,5 @@
+import discord
+from discord.ext import commands
 from .utils.chat_formatting import pagify
 import aiohttp
 
