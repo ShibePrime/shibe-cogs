@@ -15,8 +15,7 @@ class pollen:
     async def main() -> None:
         """Create the aiohttp session and run the example."""
         async with ClientSession() as websession:
-            await
-            run(websession)
+            await run(websession)
 
     asyn def run(websession):
             client = pypollencom.Client(98908, websession)
