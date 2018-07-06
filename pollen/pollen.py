@@ -37,12 +37,12 @@ class pollen:
     async def print_pollen(self, url):
         try:
             async with aiohttp.get(url, headers=headers) as response:
-                soup = BeautifulSoup(await response.text(), "html.parser")
+                soup = BeautifulSoup(await response.text())
 
-            html_notes = soup.find('div', {"class": "row text-center"})
-            text_notes = pypandoc.convert_text(html_notes, 'plain',
-                                               format='html',
-                                               extra_args=['--wrap=none'])
+#            pollendata = soup.find('div', {"class": "row text-center"})
+#            text_notes = pypandoc.convert_text(html_notes, 'plain',
+#                                               format='html',
+#                                               extra_args=['--wrap=none'])
 #            text_notes = text_notes.replace('&nbsp;', ' ')
 #            text_notes = text_notes.replace('&apos;', "'")
 #this is the only way I know howto cleanup the formatting. pls halp @TheRealShibe
@@ -54,7 +54,7 @@ class pollen:
 #            text_notes = text_notes.replace("24Hour Range", "24Hour Range \n")
 #            text_notes = text_notes.replace("API Result", "API Result \n")
 #            text_notes = text_notes.replace("Updated", "Updated \n")
-            em = discord.Embed(title='Pollen', description=text_notes, colour=0xFFD966)
+            em = discord.Embed(title='Pollen', description=soup, colour=0xFFD966)
             await self.bot.say(embed=em)
 
         except:
