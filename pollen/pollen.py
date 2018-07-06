@@ -38,8 +38,7 @@ class pollen:
             async def main() -> None:
                 """Create the aiohttp session and run the example."""
                 async with ClientSession() as websession:
-                    await
-                    run(websession)
+                    await run(websession)
 
             async def run(websession):
                 """Run."""
@@ -50,13 +49,11 @@ class pollen:
 
                     # Work with allergen data:
                     print()
-                    await
-                    allergens(client)
+                    await allergens(client)
 
                     # Work with disease data:
                     print()
-                    await
-                    disease(client)
+                    await disease(client)
                 except PollenComError as err:
                     print(err)
 
