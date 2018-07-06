@@ -1,11 +1,8 @@
 import json
 import discord
+import pypollencom
 from aiohttp import ClientSession
 from discord.ext import commands
-
-url = 'https://www.pollen.com/api/forecast/current/pollen/98908'
-headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com/forecast/current/pollen/98908'}
-
 
 class pollen:
     """get pollen"""
@@ -19,11 +16,15 @@ class pollen:
         """Prints pollen"""
 
     async def get_pollen(self):
-        async with ClientSession() as session:
+        async with ClientSession() as websession:
             async with session.get(url, headers=headers) as response:
-                pollen = await response.json()
-#                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
-                await self.bot.say(pollen)
-                return pollen
+                await run(websession)
+
+    async def run(websession):
+        client = pypollencom.Client(98908, websession)
+        data = client.allergens.current()
+        em = discord.Embed(title='', description=data, colour=0x6FA8DC, )
+        await self.bot.say(embed=em)
+
 def setup(bot):
     bot.add_cog(pollen(bot))
