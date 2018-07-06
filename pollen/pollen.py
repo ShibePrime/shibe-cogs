@@ -19,7 +19,7 @@ base_url = 'https://www.pollen.com/forecast/current/pollen/98908'
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 
-class Pollen:
+class pollen:
 
     """Much Pollen , very area , wow """
 
