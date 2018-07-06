@@ -57,7 +57,5 @@ class pollen:
             except PollenComError as err:
                 print(err)
 
-    asyncio.get_event_loop().run_until_complete(main())
-
 def setup(bot):
     bot.add_cog(pollen(bot))
