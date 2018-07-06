@@ -2,7 +2,6 @@ import json
 import discord
 import pypollencom
 import asyncio
-from aiohttp import ClientSession
 from discord.ext import commands
 
 class pollen:
