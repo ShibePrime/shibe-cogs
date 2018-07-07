@@ -26,9 +26,15 @@ class pollen:
                 zip = pollen["Location"]["ZIP"]
                 city = pollen["Location"]["City"]
                 state = pollen["Location"]["State"]
+                Yesterday = pollen["Location"]["periods"]0
+                Today = pollen["Location"]["periods"]1
+                Tomorrow = pollen["Location"]["periods"]2
                 await self.bot.say(zip)
                 await self.bot.say(city)
                 await self.bot.say(state)
+                await self.bot.say(Yesterday)
+                await self.bot.say(Today)
+                await self.bot.say(Tomorrow)
 
 def setup(bot):
     bot.add_cog(pollen(bot))
