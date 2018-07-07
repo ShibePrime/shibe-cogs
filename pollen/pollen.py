@@ -20,7 +20,7 @@ class pollen:
 
     async def get_pollen(self,zip):
         async with ClientSession() as session:
-            async with session.get(url + zip, headers=headers) as response:
+            async with session.get(url + str(zip), headers=headers) as response:
                 pollen = await response.text()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
 #                data = pollen["Type"]
