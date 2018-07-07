@@ -4,7 +4,7 @@ from aiohttp import ClientSession
 from discord.ext import commands
 
 url = 'https://www.pollen.com/api/forecast/current/pollen/98908'
-headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com/forecast/current/pollen/98908'}
+headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com'}
 
 
 class pollen:
@@ -23,7 +23,7 @@ class pollen:
             async with session.get(url, headers=headers) as response:
                 pollen = response.json()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
-                await self.bot.say(pollen)
+                await self.bot.say(pollen[zip])
                 print (json.dumps(pollen))
 def setup(bot):
     bot.add_cog(pollen(bot))
