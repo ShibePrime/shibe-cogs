@@ -4,7 +4,7 @@ from aiohttp import ClientSession
 from discord.ext import commands
 
 url = 'https://www.pollen.com/api/forecast/current/pollen/98908'
-headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com'}
+headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com','User-Agent': 'ShibeBot'}
 
 
 class pollen:
