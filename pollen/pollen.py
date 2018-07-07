@@ -14,7 +14,7 @@ class pollen:
         self.bot = bot
 
     @commands.command(name="pollen", pass_context=True)
-    async def pollen(self, zip):
+    async def pollen(self, zip: str):
         await self.get_pollen(zip)
         """Prints pollen"""
 
