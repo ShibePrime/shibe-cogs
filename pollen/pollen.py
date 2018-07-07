@@ -23,10 +23,8 @@ class pollen:
             async with session.get(url + str(zip), headers=headers) as response:
                 pollen = await response.json()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
-                data = pollen["Type"]["ForecastDate"]
                 location = pollen["Location"]
                 area = location["ZIP"]["City"]["State"]
-                await self.bot.say(data)
                 await self.bot.say(area)
 
 def setup(bot):
