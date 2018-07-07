@@ -25,7 +25,7 @@ class pollen:
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
                 zip = pollen["Location"]["ZIP"]
                 city = pollen["Location"]["City"]
-                state = pollen["Location"]["WA"]
+                state = pollen["Location"]["State"]
                 await self.bot.say(zip)
                 await self.bot.say(city)
                 await self.bot.say(state)
