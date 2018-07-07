@@ -18,7 +18,7 @@ class pollen:
         await self.get_pollen(zip)
         """Prints pollen"""
 
-    async def get_pollen(self):
+    async def get_pollen(self,zip):
         async with ClientSession() as session:
             async with session.get(url + zip, headers=headers) as response:
                 pollen = await response.text()
