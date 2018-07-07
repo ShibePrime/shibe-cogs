@@ -13,7 +13,7 @@ class pollen:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="pollen", pass_context=True)
+    @commands.command(name="pollen")
     async def pollen(self,zip):
         await self.get_pollen(zip)
         """Prints pollen"""
@@ -25,7 +25,7 @@ class pollen:
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
 #                data = pollen["Type"]
                 await self.bot.say(url + str(zip))
-                await self.bot.say(url + ctx)
+                await self.bot.say(url + zip)
                 await self.bot.say(pollen)
                 print (pollen)
 def setup(bot):
