@@ -29,12 +29,16 @@ class pollen:
                 Yesterday = pollen["Location"]["periods"][0]["Index"]
                 Today = pollen["Location"]["periods"][1]["Index"]
                 Tomorrow = pollen["Location"]["periods"][2]["Index"]
-                await self.bot.say(zip)
-                await self.bot.say(city)
-                await self.bot.say(state)
-                await self.bot.say(Yesterday)
-                await self.bot.say(Today)
-                await self.bot.say(Tomorrow)
+                polleninfo = "__**" + city + ", " + state + ", "+ zip + "**__\n" + \
+                                "\n\n***Pollen Index***\n" + \
+                                "**Yesterday: " + Yesterday + ":**\n*" + \
+                                "**Today: " + Today + ":**\n*" + \
+                                "**Tomorrow: " + Tomorrow + ":**\n*" + "*\n\n"
+                em = discord.Embed(title='', description=polleninfo, colour=0x0FFD966, )
+                em.set_thumbnail(url="https://www.pollen.com/Content/images/Logo.png")
+                em.set_author(name='Pollen Info', icon_url="https://www.gstatic.com/healthricherkp/pollen/icon_very_high_pollen.png",
+                              url="http://db.destinytracker.com/d2/en")
+                await self.bot.say(embed=em)
 
 def setup(bot):
     bot.add_cog(pollen(bot))
