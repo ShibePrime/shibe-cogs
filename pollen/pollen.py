@@ -25,7 +25,6 @@ class pollen:
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
 #                data = pollen["Type"]
                 await self.bot.say(url + str(zip))
-                await self.bot.say(url + unicode(zip))
                 await self.bot.say(url + discord.Message)
                 await self.bot.say(url + ctx)
                 await self.bot.say(pollen)
