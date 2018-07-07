@@ -14,13 +14,13 @@ class pollen:
         self.bot = bot
 
     @commands.command(name="pollen", pass_context=True)
-    async def pollen(self, ctx):
-        await self.get_pollen()
+    async def pollen(self, zip):
+        await self.get_pollen(zip)
         """Prints pollen"""
 
-    async def get_pollen(self,ctx):
+    async def get_pollen(self,zip):
         async with ClientSession() as session:
-            async with session.get(url + ctx, headers=headers) as response:
+            async with session.get(url + zip, headers=headers) as response:
                 pollen = await response.text()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
 #                data = pollen["Type"]
