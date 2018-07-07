@@ -26,9 +26,9 @@ class pollen:
                 zip = pollen["Location"]["ZIP"]
                 city = pollen["Location"]["City"]
                 state = pollen["Location"]["State"]
-                Yesterday = pollen["Location"]["periods"]0
-                Today = pollen["Location"]["periods"]1
-                Tomorrow = pollen["Location"]["periods"]2
+                Yesterday = pollen["Location"]["periods"][0]["index"]
+                Today = pollen["Location"]["periods"][1]["index"]
+                Tomorrow = pollen["Location"]["periods"][2]["index"]
                 await self.bot.say(zip)
                 await self.bot.say(city)
                 await self.bot.say(state)
