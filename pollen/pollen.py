@@ -31,9 +31,9 @@ class pollen:
                 Tomorrow = pollen["Location"]["periods"][2]["Index"]
                 polleninfo = "__**" + city + ", " + state + ", "+ zip + "**__\n" + \
                                 "\n\n***Pollen Index***\n" + \
-                                "**Yesterday: " + Yesterday + ":**\n*" + \
-                                "**Today: " + Today + ":**\n*" + \
-                                "**Tomorrow: " + Tomorrow + ":**\n*" + "*\n\n"
+                                "**Yesterday: " + str(Yesterday) + "**\n" + \
+                                "**Today: " + str(Today) + "**\n" + \
+                                "**Tomorrow: " + str(Tomorrow) + "**\n"
                 em = discord.Embed(title='', description=polleninfo, colour=0x0FFD966, )
                 em.set_thumbnail(url="https://www.pollen.com/Content/images/Logo.png")
                 em.set_author(name='Pollen Info', icon_url="https://www.gstatic.com/healthricherkp/pollen/icon_very_high_pollen.png",
