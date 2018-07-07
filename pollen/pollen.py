@@ -24,7 +24,7 @@ class pollen:
                 pollen = await response.text()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
 #                data = pollen["Type"]
-                await self.bot.say(pollen=)
+                await self.bot.say(pollen)
                 print (pollen)
 def setup(bot):
     bot.add_cog(pollen(bot))
