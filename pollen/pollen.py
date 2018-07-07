@@ -23,7 +23,7 @@ class pollen:
             async with session.get(url, headers=headers) as response:
                 pollen = response.json()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
-                data = pollen["type"]
+                data = pollen["Type"]
                 await self.bot.say(data)
                 print (json.dumps(pollen))
 def setup(bot):
