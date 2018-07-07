@@ -23,7 +23,8 @@ class pollen:
             async with session.get(url, headers=headers) as response:
                 pollen = response.json()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
-                await self.bot.say(pollen[zip])
+                data = pollen["type"]
+                await self.bot.say(data)
                 print (json.dumps(pollen))
 def setup(bot):
     bot.add_cog(pollen(bot))
