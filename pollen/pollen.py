@@ -3,7 +3,7 @@ import discord
 from aiohttp import ClientSession
 from discord.ext import commands
 
-url = 'https://www.pollen.com/api/forecast/current/pollen/98908'
+url = 'https://www.pollen.com/api/forecast/current/pollen/'
 headers = {'Content-Type': 'application/json; charset=utf-8','Referer': 'https://www.pollen.com','User-Agent': 'ShibeBot'}
 
 
@@ -18,9 +18,9 @@ class pollen:
         await self.get_pollen()
         """Prints pollen"""
 
-    async def get_pollen(self):
+    async def get_pollen(self,ctx):
         async with ClientSession() as session:
-            async with session.get(url, headers=headers) as response:
+            async with session.get(url + ctx, headers=headers) as response:
                 pollen = await response.text()
 #                em = discord.Embed(title='', description=pollenstr, colour=0x6FA8DC, )
 #                data = pollen["Type"]
